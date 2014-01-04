@@ -38,9 +38,9 @@ fi
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
 		#"earthquake 3 0" \
-		"vcs_modified 9 255" \
-		"vcs_branch 9 255" \
-		"pwd 89 211" \
+		"vcs_modified 88 255" \
+		"vcs_branch 89 211" \
+		"pwd 9 255" \
 		#"mailcount 9 255" \
 		#"now_playing 234 37" \
 		#"cpu 235 136" \
