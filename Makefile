@@ -8,6 +8,7 @@ clean:
 	rm -Rf .vim/bundle/neobundle.vim
 neobundle:
 	git clone https://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
+	vim +BundleInstall +qall
 symlink:
 	ln -fs $(DOTFILES)/.zshrc ${HOME}/.zshrc
 	ln -fs $(DOTFILES)/.zshenv ${HOME}/.zshenv
