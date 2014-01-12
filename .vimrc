@@ -5,8 +5,8 @@
         set runtimepath+=~/.vim/bundle/neobundle.vim/
     endif
     call neobundle#rc(expand('~/.vim/bundle/'))
-    " Vundle
-    NeoBundle 'gmarik/vundle'
+    " NeoBundle
+    NeoBundleFetch 'Shougo/neobundle.vim'
     " Emmet
     NeoBundle 'mattn/emmet-vim'
     " ctrlp
