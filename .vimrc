@@ -7,7 +7,7 @@
     call neobundle#rc(expand('~/.vim/bundle/'))
     " NeoBundle
     NeoBundleFetch 'Shougo/neobundle.vim'
-    " Debugger
+    " Vdebug
     NeoBundle 'joonty/vdebug'
     " Emmet
     NeoBundle 'mattn/emmet-vim'
