@@ -76,6 +76,9 @@
         if has('conceal')
           set conceallevel=2 concealcursor=i
         endif
+    " Default Snippets
+    NeoBundle 'Shougo/neosnippet-snippets'
+
     " ファイルタイプ有効化
     filetype plugin indent on
     " バンドルチェック
