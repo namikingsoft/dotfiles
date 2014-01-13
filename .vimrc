@@ -100,7 +100,7 @@
     set nobackup
     set noswapfile
     " 行数表示
-    set number
+    "set number
     " 自動改行しない
     set formatoptions=q
     " 改行時のコメント挿入を無効化
