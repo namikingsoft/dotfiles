@@ -108,6 +108,8 @@
     alias t="tmux -2"
     # tmux アタッチ
     alias ta="t a"
+    # php xdebug
+    alias phpx="php-xdebuga"
 # }
 
 # 外部アプリ用 {
