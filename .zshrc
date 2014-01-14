@@ -109,7 +109,7 @@
     # tmux アタッチ
     alias ta="t a"
     # php xdebug
-    alias phpx="php-xdebug"
+    alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
 # }
 
 # 外部アプリ用 {

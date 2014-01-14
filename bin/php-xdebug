@@ -1,4 +1,0 @@
-#!/bin/sh
-
-export XDEBUG_CONFIG="idekey=xdebug"
-php "$@"
