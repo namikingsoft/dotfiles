@@ -104,7 +104,9 @@
     function mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
     # コマンド履歴全件表示
     alias ha="history -i 0"
-    # 隠しファイルls
+    # リストls
+    alias ll="ls -l"
+    # 隠しファイルリストls
     alias la="ls -al"
     # tmux 256色
     alias t="tmux -2"
