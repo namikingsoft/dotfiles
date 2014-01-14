@@ -9,8 +9,8 @@ chmod:
 neobundle:
 	rm -Rf .vim/bundle/neobundle.vim
 	git clone https://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
-	vim +NeoBundleInstall +qall
-	vim +NeoBundleClean +qall
+	#vim +NeoBundleInstall +qall
+	#vim +NeoBundleClean +qall
 symlink:
 	mkdir -p ${HOME}/bin
 	ln -fs ${DOTFILES}/bin/php-xdebug ${HOME}/bin/php-xdebug
