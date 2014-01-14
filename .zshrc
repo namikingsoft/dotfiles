@@ -100,6 +100,8 @@
 # }
 
 # Alias {
+    # ディレクトリ作成後、カレントディレクトリに
+    function mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
     # コマンド履歴全件表示
     alias ha="history -i 0"
     # 隠しファイルls
