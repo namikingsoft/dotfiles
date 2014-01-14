@@ -8,7 +8,8 @@
     " NeoBundle
     NeoBundleFetch 'Shougo/neobundle.vim'
     " Vdebug
-    NeoBundle 'joonty/vdebug'
+    "NeoBundle 'joonty/vdebug'
+    NeoBundle 'namikingsoft/vdebug'
     " Emmet
     NeoBundle 'mattn/emmet-vim'
     " ctrlp
