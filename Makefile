@@ -2,10 +2,8 @@
 DOTFILES := $(shell pwd)
 
 # Makefile
-all: chmod neobundle
+all: neobundle
 install: symlink
-chmod:
-	chmod +x bin/*
 neobundle:
 	rm -Rf .vim/bundle/neobundle.vim
 	git clone https://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
