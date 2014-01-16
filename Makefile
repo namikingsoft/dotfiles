@@ -3,13 +3,10 @@ DOTFILES := $(shell pwd)
 
 # Makefile
 all: submodule
-install: symlink neobundlea
+install: symlink neobundle
 submodule:
 	git submodule update
 	ln -fsn ${DOTFILES}/.vim/bundle/neobundle.vim ${DOTFILES}/vendor/neobundle.vim
-neobundle:
-	rm -Rf .vim/bundle/neobundle.vim
-	git clone https://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
 symlink:
 	mkdir -p ${HOME}/bin
 	ln -fs ${DOTFILES}/bin/php-xdebug ${HOME}/bin/php-xdebug
