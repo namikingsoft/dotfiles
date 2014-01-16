@@ -12,6 +12,10 @@
     NeoBundle 'namikingsoft/vdebug'
     " Emmet
     NeoBundle 'mattn/emmet-vim'
+    " Ag
+    NeoBundle 'rking/ag.vim'
+    " Qfreplace
+    NeoBundle 'thinca/vim-qfreplace'
     " ctrlp
     NeoBundle 'kien/ctrlp.vim'
     " nerdtree
