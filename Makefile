@@ -5,8 +5,9 @@ DOTFILES := $(shell pwd)
 all: submodule
 install: symlink neobundle
 submodule:
+	git submodule init
 	git submodule update
-	ln -fsn ${DOTFILES}/.vim/bundle/neobundle.vim ${DOTFILES}/vendor/neobundle.vim
+	ln -fsn ${DOTFILES}/vendor/neobundle.vim ${DOTFILES}/.vim/bundle/neobundle.vim
 symlink:
 	mkdir -p ${HOME}/bin
 	ln -fs ${DOTFILES}/bin/php-xdebug ${HOME}/bin/php-xdebug
