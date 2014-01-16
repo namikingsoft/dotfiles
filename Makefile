@@ -2,12 +2,15 @@
 DOTFILES := $(shell pwd)
 
 # Makefile
-all: neobundle_checkout
-install: make_symlink neobundle_install
-neobundle_checkout:
+all: submodule
+install: symlink neobundlea
+submodule:
+	git submodule update
+	ln -fsn ${DOTFILES}/.vim/bundle/neobundle.vim ${DOTFILES}/vendor/neobundle.vim
+neobundle:
 	rm -Rf .vim/bundle/neobundle.vim
 	git clone https://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
-make_symlink:
+symlink:
 	mkdir -p ${HOME}/bin
 	ln -fs ${DOTFILES}/bin/php-xdebug ${HOME}/bin/php-xdebug
 	ln -fs $(DOTFILES)/.zshrc ${HOME}/.zshrc
@@ -16,6 +19,6 @@ make_symlink:
 	ln -fs $(DOTFILES)/.tmux-powerlinerc ${HOME}/.tmux-powerlinerc
 	ln -fsn $(DOTFILES)/.vim ${HOME}/.vim
 	ln -fs $(DOTFILES)/.vimrc ${HOME}/.vimrc
-neobundle_install:
+neobundle:
 	vim +NeoBundleInstall +qall
 	vim +NeoBundleClean +qall
