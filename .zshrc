@@ -123,4 +123,10 @@
 # 外部アプリ用 {
     # tmux powerline 用 (https://github.com/erikw/tmux-powerline)
     PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+    # rbenv
+    if [ -d $HOME/.rbenv/bin ]; then
+        export RBENV_ROOT=$HOME/.rbenv
+        export PATH="$RBENV_ROOT/bin:$PATH"
+        eval "$(rbenv init -)"
+    fi
 # }
