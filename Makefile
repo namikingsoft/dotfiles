@@ -19,3 +19,7 @@ symlink:
 neobundle:
 	vim +NeoBundleInstall +qall
 	vim +NeoBundleClean +qall
+lpm:
+	wget -O /tmp/lpm http://www.kasahara.ws/lpm/lpm
+	chmod +x /tmp/lpm
+	/tmp/lpm --local local initlocaldir
