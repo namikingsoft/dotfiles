@@ -18,6 +18,12 @@
     NeoBundle 'thinca/vim-qfreplace'
     " ctrlp
     NeoBundle 'kien/ctrlp.vim'
+    " Coffee-Script
+    NeoBundle 'kchmck/vim-coffee-script'
+    " Jade
+    NeoBundle 'digitaltoad/vim-jade'
+    " JS BDDツール
+    NeoBundle 'claco/jasmine.vim'
     " nerdtree
     NeoBundle 'scrooloose/nerdtree'
         nmap <silent> <C-e>      :NERDTreeToggle<CR>
