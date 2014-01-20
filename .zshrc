@@ -112,6 +112,10 @@
     alias t="tmux -2"
     # tmux アタッチ
     alias ta="t a"
+    # titanium
+    alias ti="titanium"
+    # tishadow
+    alias tis="tishadow"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
 # }
