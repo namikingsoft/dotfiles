@@ -20,8 +20,12 @@
     NeoBundle 'kien/ctrlp.vim'
     " Coffee-Script
     NeoBundle 'kchmck/vim-coffee-script'
+        au BufRead,BufNewFile *.coffee            set filetype=coffee
+        au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
     " Jade
     NeoBundle 'digitaltoad/vim-jade'
+        au BufRead,BufNewFile *.jade            set filetype=jade
+        au BufNewFile,BufReadPost *.jade setl shiftwidth=2 expandtab
     " JS BDDツール
     NeoBundle 'claco/jasmine.vim'
     " nerdtree
