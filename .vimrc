@@ -114,6 +114,10 @@
     set nowritebackup
     set nobackup
     set noswapfile
+    " 色表示
+    set t_Co=256
+    syntax on
+    set number
     " 行数表示
     set number
     " 自動改行しない
