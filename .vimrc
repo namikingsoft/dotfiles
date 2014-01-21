@@ -116,7 +116,7 @@
     set noswapfile
     " 色表示
     set t_Co=256
-    colorscheme koehler
+    colorscheme elflord
     syntax on
     set number
     " 行数表示
