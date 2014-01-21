@@ -104,6 +104,8 @@
     function mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
     # コマンド履歴全件表示
     alias ha="history -i 0"
+    # 色付きls
+    alias ls="ls -G"
     # リストls
     alias ll="ls -l"
     # 隠しファイルリストls
