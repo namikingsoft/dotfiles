@@ -116,6 +116,7 @@
     set noswapfile
     " 色表示
     set t_Co=256
+    colorscheme desert
     syntax on
     set number
     " 行数表示
