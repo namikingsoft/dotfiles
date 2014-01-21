@@ -154,7 +154,3 @@
     " vimgrep をデフォルトのgrepとする場合internal
     "set grepprg=internal
 " }
-
-" ファイルタイプ有効化 {
-    filetype plugin indent on
-" }
