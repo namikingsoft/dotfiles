@@ -134,8 +134,8 @@
     " vim でタブや全角スペースを表示する
     set lcs=tab:>.,trail:_,extends:\
     set list
-    highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
-    highlight JpSpace cterm=underline ctermfg=7 guifg=7
+    highlight SpecialKey cterm=NONE ctermfg=8 guifg=8
+    highlight JpSpace cterm=underline ctermfg=8 guifg=8
     au BufRead,BufNew * match JpSpace /　/
     " 保存時に行末の空白を除去する
     autocmd BufWritePre * :%s/\s\+$//ge
