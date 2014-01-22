@@ -108,7 +108,6 @@
         linux*)  alias ls='ls --color' ;;
         *)       alias ls='ls' ;;
     esac
-    alias ls="ls --color=auto"
     # リストls
     alias ll="ls -l"
     # 隠しファイルリストls
