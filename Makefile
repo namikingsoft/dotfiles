@@ -16,6 +16,9 @@ symlink:
 	ln -fs $(DOTFILES)/.tmux-powerlinerc ${HOME}/.tmux-powerlinerc
 	ln -fsn $(DOTFILES)/.vim ${HOME}/.vim
 	ln -fs $(DOTFILES)/.vimrc ${HOME}/.vimrc
+	ln -fs $(DOTFILES)/.gitconfig ${HOME}/.gitconfig
+	ln -fs $(DOTFILES)/.gitconfig.ignore ${HOME}/.gitconfig.ignore
+	cp -u $(DOTFILES)/.gitconfig.local ${HOME}/.gitconfig.local
 neobundle:
 	vim +NeoBundleInstall +qall
 	vim +NeoBundleClean +qall
