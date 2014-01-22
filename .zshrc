@@ -102,14 +102,19 @@
 # Alias {
     # ディレクトリ作成後、カレントディレクトリに
     function mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
-    # コマンド履歴全件表示
-    alias ha="history -i 0"
     # 色付きls
+    case "${OSTYPE}" in
+        darwin*) alias ls="ls -G" ;;
+        linux*)  alias ls='ls --color' ;;
+        *)       alias ls='ls' ;;
+    esac
     alias ls="ls --color=auto"
     # リストls
     alias ll="ls -l"
     # 隠しファイルリストls
     alias la="ls -al"
+    # コマンド履歴全件表示
+    alias ha="history -i 0"
     # tmux 256色
     alias t="tmux -2"
     # tmux アタッチ
