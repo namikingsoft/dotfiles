@@ -18,7 +18,7 @@ symlink:
 	ln -fs $(DOTFILES)/.vimrc ${HOME}/.vimrc
 	ln -fs $(DOTFILES)/.gitconfig ${HOME}/.gitconfig
 	ln -fs $(DOTFILES)/.gitconfig.ignore ${HOME}/.gitconfig.ignore
-	yes n | cp -i $(DOTFILES)/.gitconfig.local ${HOME}/.gitconfig.local
+	-yes n | cp -i $(DOTFILES)/.gitconfig.local ${HOME}/.gitconfig.local
 neobundle:
 	vim +NeoBundleInstall +qall
 	vim +NeoBundleClean +qall
