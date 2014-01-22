@@ -118,7 +118,11 @@
     set t_Co=256
     colorscheme desert
     syntax on
-    set number
+    " 色設定(変換候補)
+    highlight Pmenu ctermbg=16 ctermfg=0 guifg=#000000 guibg=#999999
+    highlight PmenuSel ctermbg=blue ctermfg=black
+    highlight PmenuSbar ctermbg=0 ctermfg=9
+    highlight PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
     " 行数表示
     set number
     " 自動改行しない
