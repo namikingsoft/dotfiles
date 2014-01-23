@@ -114,6 +114,8 @@
     alias la="ls -al"
     # コマンド履歴全件表示
     alias ha="history -i 0"
+    # git
+    alias g="git"
     # tmux 256色
     alias t="tmux -2"
     # tmux アタッチ
