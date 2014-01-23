@@ -23,7 +23,6 @@
         let g:vim_markdown_initial_foldlevel=3
         " md as markdown, instead of modula2
         autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-        autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setl shiftwidth=3 expandtab
         " Disable highlight italic in Markdown
         autocmd FileType markdown hi! def link markdownItalic LineNr
     " Qfreplace
