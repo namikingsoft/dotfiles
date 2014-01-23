@@ -31,3 +31,6 @@
     tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
     # マージ済みのローカルブランチを削除する
     clean-branch = !git branch --merged | grep -v '*' | grep -v 'master' | grep -v 'develop' | xargs -I % git branch -d %
+[push]
+    # push形式
+    default = simple
