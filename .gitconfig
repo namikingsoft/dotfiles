@@ -21,8 +21,12 @@
     ps = push
     mg = merge
     rs = rebase
+    df = diff
     ad = add
     s  = svn
+    # git diff のvimdiff版
+    vimdiff = difftool --tool=vimdiff --no-prompt
+    vdf     = difftool --tool=vimdiff --no-prompt
     # git log の木構造表示
     tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
     # マージ済みのローカルブランチを削除する
