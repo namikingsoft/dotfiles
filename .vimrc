@@ -14,6 +14,8 @@
     NeoBundle 'mattn/emmet-vim'
     " Ag
     NeoBundle 'rking/ag.vim'
+    " fugitive
+    NeoBundle 'tpope/vim-fugitive'
     " Markdown
     NeoBundle 'rcmdnk/vim-markdown'
     NeoBundle 'kannokanno/previm'
