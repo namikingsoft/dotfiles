@@ -1,5 +1,5 @@
 # 日本語設定
-export LANG=en_US.UTF-8
+export LANG=ja_JP.UTF-8
 export KCODE=u # Ruby用
 
 # エディタ設定
