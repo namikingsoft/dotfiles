@@ -12,13 +12,14 @@
 [alias]
     # 基本設定
     co = checkout
+    cm = commit
     st = status
     br = branch
     pl = pull
     ps = push
     mg = merge
     rs = rebase
-    a  = add
+    ad = add
     s  = svn
     # git log の木構造表示
     tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
