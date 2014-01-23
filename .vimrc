@@ -14,6 +14,14 @@
     NeoBundle 'mattn/emmet-vim'
     " Ag
     NeoBundle 'rking/ag.vim'
+    " Markdown
+    NeoBundle 'rcmdnk/vim-markdown'
+    NeoBundle 'kannokanno/previm'
+    NeoBundle 'tyru/open-browser.vim'
+        " md as markdown, instead of modula2
+        autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+        " Disable highlight italic in Markdown
+        autocmd FileType markdown hi! def link markdownItalic LineNr
     " Qfreplace
     NeoBundle 'thinca/vim-qfreplace'
     " ctrlp
@@ -145,6 +153,8 @@
     au BufRead,BufNew * match JpSpace /　/
     " 保存時に行末の空白を除去する
     autocmd BufWritePre * :%s/\s\+$//ge
+        " Markdownファイルは行末の空白を除去しない
+        autocmd! BufWritePre *.{md,mdwn,mkd,mkdn,mark*}
     " 全角記号を入力しても、ずれないようにする
     set ambiwidth=double
 " }
