@@ -127,6 +127,8 @@
     set number
     " 自動改行しない
     set formatoptions=q
+    " 折りたたみ設定 (マーカー有効)
+    set foldmethod=marker
     " 改行時のコメント挿入を無効化
     autocmd FileType * setlocal formatoptions-=ro
     " タブを半角空白４つにする
