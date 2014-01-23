@@ -14,6 +14,17 @@
     NeoBundle 'mattn/emmet-vim'
     " Ag
     NeoBundle 'rking/ag.vim'
+    " Markdown
+    NeoBundle 'rcmdnk/vim-markdown'
+    NeoBundle 'kannokanno/previm'
+    NeoBundle 'tyru/open-browser.vim'
+        " 折りたたみ設定
+        let g:vim_markdown_folding_disabled=1
+        let g:vim_markdown_initial_foldlevel=3
+        " md as markdown, instead of modula2
+        autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+        " Disable highlight italic in Markdown
+        autocmd FileType markdown hi! def link markdownItalic LineNr
     " Qfreplace
     NeoBundle 'thinca/vim-qfreplace'
     " ctrlp
@@ -138,13 +149,15 @@
     " 自動インデント
     set autoindent
     " vim でタブや全角スペースを表示する
-    set lcs=tab:>.,trail:_,extends:\
     set list
+    set lcs=tab:>.,trail:_,extends:\
     highlight SpecialKey cterm=NONE ctermfg=8 guifg=8
     highlight JpSpace cterm=underline ctermfg=8 guifg=8
     au BufRead,BufNew * match JpSpace /　/
     " 保存時に行末の空白を除去する
-    autocmd BufWritePre * :%s/\s\+$//ge
+    autocmd BufEnter * autocmd BufWritePre * :%s/\s\+$//ge
+    " Markdownの場合は行末の空白を除去しない
+    autocmd BufEnter *.{md,mdwn,mkd,mkdn,mark*} autocmd! BufWritePre *
     " 全角記号を入力しても、ずれないようにする
     set ambiwidth=double
 " }

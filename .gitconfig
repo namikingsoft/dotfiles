@@ -6,19 +6,21 @@
     editor = vim
     # 全体的な無視ファイル設定
     excludesfile = ~/.gitconfig.ignore
+	precomposeunicode = true
 [color]
     # 全コマンドをカラー化
     ui = auto
 [alias]
     # 基本設定
     co = checkout
+    cm = commit
     st = status
     br = branch
     pl = pull
     ps = push
     mg = merge
     rs = rebase
-    a  = add
+    ad = add
     s  = svn
     # git log の木構造表示
     tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
