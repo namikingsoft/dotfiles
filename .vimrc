@@ -136,6 +136,11 @@
     highlight PmenuSel ctermbg=blue ctermfg=black
     highlight PmenuSbar ctermbg=0 ctermfg=9
     highlight PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
+    " 色設定(vimdiff)
+    hi DiffAdd    ctermfg=black ctermbg=2
+    hi DiffChange ctermfg=black ctermbg=3
+    hi DiffDelete ctermfg=black ctermbg=6
+    hi DiffText   ctermfg=black ctermbg=7
     " 行数表示
     set number
     " 自動改行しない
