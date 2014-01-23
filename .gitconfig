@@ -6,7 +6,8 @@
     editor = vim
     # 全体的な無視ファイル設定
     excludesfile = ~/.gitconfig.ignore
-	precomposeunicode = true
+    # 日本語ファイル有効化(Mac用)
+    precomposeunicode = true
 [color]
     # 全コマンドをカラー化
     ui = auto
