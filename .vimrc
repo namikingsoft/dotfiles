@@ -162,14 +162,14 @@
     set autoindent
     " vim でタブや全角スペースを表示する
     set list
-    set lcs=tab:>.,trail:_,extends:\
+    set lcs=tab:>.,trail:~,extends:\
     highlight SpecialKey cterm=NONE ctermfg=8 guifg=8
     highlight JpSpace cterm=underline ctermfg=8 guifg=8
     au BufRead,BufNew * match JpSpace /　/
     " 保存時に行末の空白を除去する
-    autocmd BufEnter * autocmd BufWritePre * :%s/\s\+$//ge
+    "autocmd BufEnter * autocmd BufWritePre * :%s/\s\+$//ge
     " Markdownの場合は行末の空白を除去しない
-    autocmd BufEnter *.{md,mdwn,mkd,mkdn,mark*} autocmd! BufWritePre *
+    "autocmd BufEnter *.{md,mdwn,mkd,mkdn,mark*} autocmd! BufWritePre *
     " 全角記号を入力しても、ずれないようにする
     set ambiwidth=double
 " }
