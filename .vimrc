@@ -10,6 +10,11 @@
     " Vdebug
     "NeoBundle 'joonty/vdebug'
     NeoBundle 'namikingsoft/vdebug'
+    " smooth-scroll
+    NeoBundle 'yonchu/accelerated-smooth-scroll'
+        " エイリアス
+        nmap <silent> <C-s> <Plug>(ac-smooth-scroll-c-d)
+        nmap <silent> <C-a> <Plug>(ac-smooth-scroll-c-u)
     " Emmet
     NeoBundle 'mattn/emmet-vim'
     " Ag
