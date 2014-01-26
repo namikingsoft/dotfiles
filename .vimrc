@@ -17,6 +17,11 @@
         nmap <silent> <C-a> <Plug>(ac-smooth-scroll-c-u)
     " Emmet
     NeoBundle 'mattn/emmet-vim'
+    " unite-outline
+    NeoBundle 'Shougo/unite.vim'
+    NeoBundle 'h1mesuke/unite-outline'
+        let g:unite_split_rule = 'botright'
+        noremap <Space>o <ESC>:Unite -vertical -winwidth=40 outline<Return>
     " Ag
     NeoBundle 'rking/ag.vim'
     " fugitive
