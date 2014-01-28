@@ -7,6 +7,16 @@
     call neobundle#rc(expand('~/.vim/bundle/'))
     " NeoBundle
     NeoBundleFetch 'Shougo/neobundle.vim'
+    " lightline
+    NeoBundle 'itchyny/lightline.vim'
+        let g:lightline = {
+        \ 'colorscheme': 'powerline',
+        \ 'component': {
+        \   'readonly': '%{&readonly?"⭤":""}',
+        \ },
+        \ 'separator': { 'left': '⮀', 'right': '⮂' },
+        \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+        \ }
     " Vdebug
     "NeoBundle 'joonty/vdebug'
     NeoBundle 'namikingsoft/vdebug'
