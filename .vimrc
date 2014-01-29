@@ -38,6 +38,27 @@
         let s:p.normal.error = [ [ 'gray9', 'brightestred' ] ]
         let s:p.normal.warning = [ [ 'gray1', 'yellow' ] ]
         let g:lightline#colorscheme#powerline#palette = lightline#colorscheme#fill(s:p)
+    " Vim-Session
+    NeoBundle 'xolox/vim-session', {
+        \ 'depends' : 'xolox/vim-misc',
+        \ }
+        " 現在のディレクトリ直下の .vimsessions/ を取得
+        let s:local_session_directory = xolox#misc#path#merge(getcwd(), '.vimsessions')
+        " session保存ディレクトリをそのディレクトリの設定
+        let g:session_directory = s:local_session_directory
+        " 存在すれば
+        if isdirectory(s:local_session_directory)
+            " vimを辞める時に自動保存
+            let g:session_autosave = 'yes'
+            " 引数なしでvimを起動した時にsession保存ディレクトリのdefault.vimを開く
+            let g:session_autoload = 'yes'
+            " 1分間に1回自動保存
+            let g:session_autosave_periodic = 1
+        else
+            let g:session_autosave = 'no'
+            let g:session_autoload = 'no'
+        endif
+        unlet s:local_session_directory
     " Vdebug
     "NeoBundle 'joonty/vdebug'
     NeoBundle 'namikingsoft/vdebug'
