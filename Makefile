@@ -7,7 +7,7 @@ install: symlink neobundle
 submodule:
 	git submodule init
 	git submodule update
-	ln -fsn ${DOTFILES}/vendor/neobundle.vim ${DOTFILES}/.vim/bundle/neobundle.vim
+	ln -fsn ${DOTFILES}/vendor/gitmodules/neobundle.vim ${DOTFILES}/.vim/bundle/neobundle.vim
 symlink:
 	mkdir -p ${HOME}/bin
 	ln -fs $(DOTFILES)/.zshrc ${HOME}/.zshrc

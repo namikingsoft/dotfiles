@@ -1,6 +1,6 @@
-[submodule "vendor/neobundle.vim"]
-	path = vendor/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
-[submodule "vendor/tmux-powerline"]
-	path = vendor/tmux-powerline
+[submodule "vendor/gitmodules/tmux-powerline"]
+	path = vendor/gitmodules/tmux-powerline
 	url = https://github.com/namikingsoft/tmux-powerline.git
+[submodule "vendor/gitmodules/neobundle.vim"]
+	path = vendor/gitmodules/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
