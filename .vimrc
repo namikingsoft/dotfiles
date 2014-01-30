@@ -33,7 +33,7 @@
         let s:p.replace.right = s:p.normal.right
         let s:p.tabline.left = [ [ '#073642', '#93a1a1' ] ]
         let s:p.tabline.tabsel = [ [ '#073642', '#fdf6e3' ] ]
-        let s:p.tabline.middle = [ [ '#93a1a1', '#073642' ] ]
+        let s:p.tabline.middle = [ [ '#93a1a1', '#303030' ] ]
         let s:p.tabline.right = [ [ '#073642', '#fdf6e3' ] ]
         let s:p.normal.error = [ [ 'gray9', 'brightestred' ] ]
         let s:p.normal.warning = [ [ 'gray1', 'yellow' ] ]
