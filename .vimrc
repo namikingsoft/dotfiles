@@ -189,6 +189,12 @@
 " }
 
 " 基本設定 {
+    " カーソル設定
+    set cursorline
+    set nocursorcolumn
+    " ステータスタブラインを常に表示
+    set laststatus=2
+    set showtabline=2
     " バックアップ/スワップファイルなし
     set nowritebackup
     set nobackup
@@ -197,6 +203,8 @@
     set t_Co=256
     colorscheme desert
     syntax on
+    " 色設定(行番号)
+    highlight LineNr ctermfg=130 ctermbg=234
     " 色設定(変換候補)
     highlight Pmenu ctermbg=16 ctermfg=0 guifg=#000000 guibg=#999999
     highlight PmenuSel ctermbg=blue ctermfg=black
