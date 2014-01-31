@@ -31,10 +31,10 @@
         let s:p.insert.middle = [ [ 'mediumcyan', 'darkestblue' ] ]
         let s:p.replace.middle = s:p.normal.middle
         let s:p.replace.right = s:p.normal.right
-        let s:p.tabline.left = [ [ '#423607', '#ffdeae' ] ]
-        let s:p.tabline.tabsel = [ [ '#073642', '#fdf6e3' ] ]
+        let s:p.tabline.left = [ [ '#993300', '#f5a522' ] ]
+        let s:p.tabline.tabsel = [ [ '#663300', '#fdf6e3' ] ]
         let s:p.tabline.middle = [ [ '#93a1a1', '#303030' ] ]
-        let s:p.tabline.right = [ [ '#073642', '#fdf6e3' ] ]
+        let s:p.tabline.right = [ [ '#663300', '#fdf6e3' ] ]
         let s:p.normal.error = [ [ 'gray9', 'brightestred' ] ]
         let s:p.normal.warning = [ [ 'gray1', 'yellow' ] ]
         let g:lightline#colorscheme#powerline#palette = lightline#colorscheme#fill(s:p)
