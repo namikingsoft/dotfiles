@@ -255,8 +255,10 @@
     set incsearch
     " 検索文字の強調表示
     set hlsearch
-    " w,bの移動で認識する文字
-    "set iskeyword=a-z,A-Z,48-57,_,.,-,>
+    " grepコマンドでQuickFixを開くように
+    autocmd QuickFixCmdPost vimgrep copen
     " vimgrep をデフォルトのgrepとする場合internal
     "set grepprg=internal
+    " w,bの移動で認識する文字
+    "set iskeyword=a-z,A-Z,48-57,_,.,-,>
 " }
