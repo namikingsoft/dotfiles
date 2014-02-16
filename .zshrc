@@ -124,6 +124,10 @@
     alias ti="titanium"
     # tishadow
     alias tis="tishadow"
+    # bundle exec
+    alias be="bundle exec"
+    # bundle exec spring
+    alias bes="bundle exec spring"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
 # }
