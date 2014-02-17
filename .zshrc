@@ -116,8 +116,10 @@
     alias ha="history -i 0"
     # git
     alias g="git"
+    # tmux 256色
+    alias t="tmux -2"
     # tmux アタッチ
-    alias ta="tmux a"
+    alias ta="t a"
     # titanium
     alias ti="titanium"
     # tishadow
