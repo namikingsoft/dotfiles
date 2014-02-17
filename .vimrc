@@ -95,7 +95,7 @@
     " ctrlp
     NeoBundle 'kien/ctrlp.vim'
     " Ruby
-    NeoBundle 'tpope/vim-rails'
+    "NeoBundle 'tpope/vim-rails'
         au BufRead,BufNewFile {Gemfile,Guardfile,Vagrantfile}          set filetype=ruby
         au BufNewFile,BufReadPost {Gemfile,Guardfile,Vagrantfile}   setl tabstop=2 shiftwidth=2 expandtab
         au BufNewFile,BufReadPost *.rb setl tabstop=2 shiftwidth=2 expandtab
