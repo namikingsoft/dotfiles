@@ -130,6 +130,8 @@
     alias bes="bundle exec spring"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
+    # zshrc再読み込み
+    alias rc="source ~/.zshrc; echo '.zshrc reloaded'"
 # }
 
 # 外部アプリ用 {
