@@ -20,12 +20,12 @@
     setopt extended_glob
     # ファイルグロブで大文字小文字を区別しない
     #unsetopt caseglob
-    # オートコレクト無効
-    unsetopt correct_all
     # 補完時に大文字小文字を区別しない
     #zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
     # Shift-Tabで補完候補を逆順する("\e[Z"でも動作する)
     bindkey "^[[Z" reverse-menu-complete
+    # コマンドのスペルを訂正しない
+    unsetopt correct_all
 # }
 
 # コマンド履歴 {
@@ -87,8 +87,6 @@
     setopt auto_cd
     # cd時にディレクトリスタックにpushdする
     setopt auto_pushd
-    # コマンドのスペルを訂正する
-    setopt correct
     # =以降も補完する(--prefix=/usrなど)
     setopt magic_equal_subst
     # プロンプト定義内で変数置換やコマンド置換を扱う
