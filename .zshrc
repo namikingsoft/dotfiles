@@ -20,6 +20,8 @@
     setopt extended_glob
     # ファイルグロブで大文字小文字を区別しない
     #unsetopt caseglob
+    # オートコレクト無効
+    unsetopt correct_all
     # 補完時に大文字小文字を区別しない
     #zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
     # Shift-Tabで補完候補を逆順する("\e[Z"でも動作する)
