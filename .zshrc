@@ -25,7 +25,7 @@
     # Shift-Tabで補完候補を逆順する("\e[Z"でも動作する)
     bindkey "^[[Z" reverse-menu-complete
     # コマンドのスペルを訂正しない
-    unsetopt correct_all
+    unsetopt correctall
 # }
 
 # コマンド履歴 {
