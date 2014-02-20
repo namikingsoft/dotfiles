@@ -133,7 +133,7 @@
     # zshrc再読み込み
     alias rc="source ~/.zshrc; echo '.zshrc reloaded'"
     # vim 新セッション作成
-    alias vimnew="rm -rf .vimsessions; mkdir .vimsessions; vim"
+    alias vimnew="rm -rf .vimsessions; mkdir .vimsessions; vim +SaveSession"
     alias vimn="vimnew"
 # }
 
