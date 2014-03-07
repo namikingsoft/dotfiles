@@ -9,7 +9,7 @@ submodule:
 	git submodule update
 	ln -fsn ${DOTFILES}/vendor/gitmodules/neobundle.vim ${DOTFILES}/.vim/bundle/neobundle.vim
 symlink:
-	mkdir -p ${HOME}/bin
+	chmod -R 755 ${DITFILES}/bin
 	ln -fs $(DOTFILES)/.zshrc ${HOME}/.zshrc
 	ln -fs $(DOTFILES)/.zshenv ${HOME}/.zshenv
 	ln -fs $(DOTFILES)/.tmux.conf ${HOME}/.tmux.conf

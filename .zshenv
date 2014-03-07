@@ -8,6 +8,7 @@ export EDITOR=vim
 # ユーザー実行ファイル
 PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/local/bin
+PATH=$PATH:$HOME/dotfiles/bin
 export PATH
 
 # ユーザーライブラリ
