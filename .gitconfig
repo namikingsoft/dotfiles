@@ -18,6 +18,7 @@
     st = status
     ss = status -s
     br = branch
+    bm = branch -m
     pl = pull
     ps = push
     mg = merge
