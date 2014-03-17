@@ -14,11 +14,12 @@
 [alias]
     # 基本設定
     co = checkout
+    cob = checkout -b
     cm = commit
     st = status
     ss = status -s
     br = branch
-    bm = branch -m
+    brm = branch -m
     pl = pull
     ps = push
     mg = merge
