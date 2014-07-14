@@ -212,7 +212,7 @@
     " 色設定(行番号)
     highlight LineNr ctermfg=130 ctermbg=234
     " 色設定(変換候補)
-    highlight Pmenu ctermbg=16 ctermfg=0 guifg=#000000 guibg=#999999
+    highlight Pmenu ctermbg=16 ctermfg=8 guifg=#000000 guibg=#999999
     highlight PmenuSel ctermbg=blue ctermfg=black
     highlight PmenuSbar ctermbg=0 ctermfg=9
     highlight PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
