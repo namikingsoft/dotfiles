@@ -111,6 +111,8 @@
     NeoBundle 'roalddevries/yaml.vim'
         au BufRead,BufNewFile *.{yml,yaml}         set filetype=yaml
         au BufNewFile,BufReadPost *.{yml,yaml} setl tabstop=2 shiftwidth=2 expandtab
+    " Stylus
+    NeoBundle 'wavded/vim-stylus'
     " JS BDDツール
     NeoBundle 'claco/jasmine.vim'
     " nerdtree
