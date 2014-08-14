@@ -113,6 +113,7 @@
         au BufNewFile,BufReadPost *.{yml,yaml} setl tabstop=2 shiftwidth=2 expandtab
     " Stylus
     NeoBundle 'wavded/vim-stylus'
+        au BufNewFile,BufReadPost *.styl setl tabstop=2 shiftwidth=2 expandtab
     " JS BDDツール
     NeoBundle 'claco/jasmine.vim'
     " nerdtree
