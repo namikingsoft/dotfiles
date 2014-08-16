@@ -7,18 +7,18 @@ install: symlink neobundle
 submodule:
 	git submodule init
 	git submodule update
-	ln -fsn ${DOTFILES}/vendor/gitmodules/neobundle.vim ${DOTFILES}/.vim/bundle/neobundle.vim
+	ln -fsn ${DOTFILES}/vendor/gitmodules/neobundle.vim ${DOTFILES}/etc/vim/bundle/neobundle.vim
 symlink:
 	chmod -R 755 ${DOTFILES}/bin
-	ln -fs $(DOTFILES)/.zshrc ${HOME}/.zshrc
-	ln -fs $(DOTFILES)/.zshenv ${HOME}/.zshenv
-	ln -fs $(DOTFILES)/.tmux.conf ${HOME}/.tmux.conf
-	ln -fs $(DOTFILES)/.tmux-powerlinerc ${HOME}/.tmux-powerlinerc
-	ln -fsn $(DOTFILES)/.vim ${HOME}/.vim
-	ln -fs $(DOTFILES)/.vimrc ${HOME}/.vimrc
-	ln -fs $(DOTFILES)/.gitconfig ${HOME}/.gitconfig
-	ln -fs $(DOTFILES)/.gitconfig.ignore ${HOME}/.gitconfig.ignore
-	-yes n | cp -i $(DOTFILES)/.gitconfig.local ${HOME}/.gitconfig.local
+	ln -fs $(DOTFILES)/etc/zshenv ${HOME}/.zshenv
+	ln -fs $(DOTFILES)/etc/zshrc ${HOME}/.zshrc
+	ln -fs $(DOTFILES)/etc/tmux.conf ${HOME}/.tmux.conf
+	ln -fs $(DOTFILES)/etc/tmux-powerlinerc ${HOME}/.tmux-powerlinerc
+	ln -fsn $(DOTFILES)/etc/vim ${HOME}/.vim
+	ln -fs $(DOTFILES)/etc/vimrc ${HOME}/.vimrc
+	ln -fs $(DOTFILES)/etc/gitconfig ${HOME}/.gitconfig
+	ln -fs $(DOTFILES)/etc/gitconfig.ignore ${HOME}/.gitconfig.ignore
+	-yes n | cp -i $(DOTFILES)/etc/gitconfig.local ${HOME}/.gitconfig.local
 neobundle:
 	vim +NeoBundleInstall +qall
 	vim +NeoBundleClean +qall
