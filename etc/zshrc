@@ -147,3 +147,8 @@
         eval "$(rbenv init -)"
     fi
 # }
+
+# 外部ファイル読み込み {
+    # ローカル用設定ファイル
+    [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+# }
