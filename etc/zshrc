@@ -130,6 +130,8 @@
     alias be="bundle exec"
     # bundle exec spring
     alias bes="bundle exec spring"
+    # noglob rake
+    alias rake="noglob rake"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
