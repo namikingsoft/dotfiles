@@ -126,12 +126,10 @@
     alias ti="titanium"
     # tishadow
     alias tis="tishadow"
-    # bundle exec
-    alias be="bundle exec"
-    # bundle exec spring
-    alias bes="bundle exec spring"
-    # noglob rake
-    alias rake="noglob rake"
+    # bundle exec (noglob)
+    alias be="noglob bundle exec"
+    # bundle exec spring (noglob)
+    alias bes="noglob bundle exec spring"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
