@@ -120,6 +120,8 @@
     alias t="tmux -2"
     # tmux アタッチ
     alias ta="t a"
+    # tmux-session
+    alias ts="tmux-session"
     # titanium
     alias ti="titanium"
     # tishadow
