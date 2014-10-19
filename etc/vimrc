@@ -114,6 +114,9 @@
     " Stylus
     NeoBundle 'wavded/vim-stylus'
         au BufNewFile,BufReadPost *.styl setl tabstop=2 shiftwidth=2 expandtab
+    " Twig
+    NeoBundle 'evidens/vim-twig'
+        au BufNewFile,BufReadPost *.twig setl tabstop=2 shiftwidth=2 expandtab
     " JS BDDツール
     NeoBundle 'claco/jasmine.vim'
     " nerdtree
