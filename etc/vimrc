@@ -117,6 +117,9 @@
     " Twig
     NeoBundle 'evidens/vim-twig'
         au BufNewFile,BufReadPost *.twig setl tabstop=2 shiftwidth=2 expandtab
+    " Feature
+    NeoBundle 'tpope/vim-cucumber'
+        au BufNewFile,BufReadPost *.feature setl tabstop=2 shiftwidth=2 expandtab
     " JS BDDツール
     NeoBundle 'claco/jasmine.vim'
     " nerdtree
