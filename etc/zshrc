@@ -153,6 +153,9 @@
         export PATH="$HOME/.ndenv/bin:$PATH"
         eval "$(ndenv init -)"
     fi
+    # rvm
+    if [ -s "$HOME/.rvm/scripts/rvm" ]; then
+        $HOME/.rvm/scripts/rvm
     # nvm
     if [ -s $HOME/.nvm/nvm.sh ]; then
         source $HOME/.nvm/nvm.sh
