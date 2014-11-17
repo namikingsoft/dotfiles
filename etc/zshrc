@@ -148,6 +148,10 @@
         export PATH="$RBENV_ROOT/bin:$PATH"
         eval "$(rbenv init -)"
     fi
+    # nvm
+    if [ -s $HOME/.nvm/nvm.sh ]; then
+        source $HOME/.nvm/nvm.sh
+    fi
 # }
 
 # 外部ファイル読み込み {
