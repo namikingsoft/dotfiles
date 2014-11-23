@@ -120,6 +120,9 @@
     " Feature
     NeoBundle 'tpope/vim-cucumber'
         au BufNewFile,BufReadPost *.feature setl tabstop=2 shiftwidth=2 expandtab
+    " HTML5
+    NeoBundle 'othree/html5.vim'
+        au BufNewFile,BufReadPost *.html setl tabstop=2 shiftwidth=2 expandtab
     " JS BDDツール
     NeoBundle 'claco/jasmine.vim'
     " nerdtree
