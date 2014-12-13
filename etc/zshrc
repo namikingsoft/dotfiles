@@ -146,12 +146,12 @@
     if [ -d $HOME/.rbenv/bin ]; then
         export RBENV_ROOT=$HOME/.rbenv
         export PATH="$RBENV_ROOT/bin:$PATH"
-        eval "$(rbenv init -)"
+        eval "$(rbenv init - zsh)"
     fi
     # ndenv
     if [ -d $HOME/.ndenv/bin ]; then
         export PATH="$HOME/.ndenv/bin:$PATH"
-        eval "$(ndenv init -)"
+        eval "$(ndenv init - zsh)"
     fi
     # rvm
     if [ -s "$HOME/.rvm/scripts/rvm" ]; then
