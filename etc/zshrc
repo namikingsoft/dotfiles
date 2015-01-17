@@ -122,6 +122,10 @@
     alias ta="t a"
     # tmux-session
     alias ts="tmux-session"
+    # tmux-session save
+    alias tss="tmux-session save"
+    # tmux-session restore
+    alias tsr="tmux-session restore"
     # titanium
     alias ti="titanium"
     # tishadow
