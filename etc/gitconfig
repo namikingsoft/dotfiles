@@ -18,6 +18,7 @@
     cm = commit
     st = status
     ss = status -s
+    logs = log --name-status
     br = branch
     brm = branch -m
     brd = branch -d
