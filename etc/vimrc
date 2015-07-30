@@ -129,6 +129,13 @@
     " Sass
     au BufRead,BufNewFile *.{sass,scss} set filetype=sass
     au BufNewFile,BufReadPost *.{sass,scss} setl tabstop=2 shiftwidth=2 expandtab
+    " vim-indent-guides
+    NeoBundle 'nathanaelkane/vim-indent-guides'
+        let g:indent_guides_auto_colors=0
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
+        let g:indent_guides_enable_on_vim_startup=1
+        let g:indent_guides_guide_size=1
     " JS BDDツール
     NeoBundle 'claco/jasmine.vim'
     " nerdtree
