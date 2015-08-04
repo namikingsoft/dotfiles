@@ -87,7 +87,8 @@
         let g:vim_markdown_folding_disabled=1
         let g:vim_markdown_initial_foldlevel=3
         " md as markdown, instead of modula2
-        autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+        au BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+        au BufNewFile,BufReadPost *.{md,mdwn,mkd,mkdn,mark*} setl tabstop=2 shiftwidth=2 expandtab
         " Disable highlight italic in Markdown
         autocmd FileType markdown hi! def link markdownItalic LineNr
     " Qfreplace
@@ -129,6 +130,9 @@
     " Sass
     au BufRead,BufNewFile *.{sass,scss} set filetype=sass
     au BufNewFile,BufReadPost *.{sass,scss} setl tabstop=2 shiftwidth=2 expandtab
+    " less
+    NeoBundle 'groenewege/vim-less'
+        au BufNewFile,BufReadPost *.less setl tabstop=2 shiftwidth=2 expandtab
     " vim-indent-guides
     NeoBundle 'nathanaelkane/vim-indent-guides'
         let g:indent_guides_auto_colors=0
