@@ -18,7 +18,3 @@ export LD_LIBRARY_PATH
 # ユーザーズマニュアル
 MANPATH=$MANPATH:$HOME/local/share/man
 export MANPATH
-
-# Go
-GOPATH=$HOME
-export GOPATH

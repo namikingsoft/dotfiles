@@ -100,6 +100,10 @@
         au BufRead,BufNewFile {Gemfile,Guardfile,Vagrantfile}          set filetype=ruby
         au BufNewFile,BufReadPost {Gemfile,Guardfile,Vagrantfile}   setl tabstop=2 shiftwidth=2 expandtab
         au BufNewFile,BufReadPost *.rb setl tabstop=2 shiftwidth=2 expandtab
+    " JavaScript
+    NeoBundle 'pangloss/vim-javascript'
+    NeoBundle 'elzr/vim-json'
+        au BufNewFile,BufReadPost *.{js,json} setl tabstop=2 shiftwidth=2 expandtab
     " TypeScript
     NeoBundle 'https://github.com/leafgarland/typescript-vim.git'
         au BufNewFile,BufReadPost *.ts setl tabstop=2 shiftwidth=2 expandtab
@@ -111,13 +115,13 @@
     NeoBundle 'digitaltoad/vim-jade'
         au BufRead,BufNewFile *.jade            set filetype=jade
         au BufNewFile,BufReadPost *.jade setl tabstop=2 shiftwidth=2 expandtab
+    " Ace
+    NeoBundle 'yosssi/vim-ace'
+        au BufNewFile,BufReadPost *.ace setl tabstop=2 shiftwidth=2 expandtab
     " Yaml
     NeoBundle 'roalddevries/yaml.vim'
         au BufRead,BufNewFile *.{yml,yaml}         set filetype=yaml
         au BufNewFile,BufReadPost *.{yml,yaml} setl tabstop=2 shiftwidth=2 expandtab
-    " Stylus
-    NeoBundle 'wavded/vim-stylus'
-        au BufNewFile,BufReadPost *.styl setl tabstop=2 shiftwidth=2 expandtab
     " Twig
     NeoBundle 'evidens/vim-twig'
         au BufNewFile,BufReadPost *.twig setl tabstop=2 shiftwidth=2 expandtab
@@ -133,6 +137,9 @@
     " less
     NeoBundle 'groenewege/vim-less'
         au BufNewFile,BufReadPost *.less setl tabstop=2 shiftwidth=2 expandtab
+    " Stylus
+    NeoBundle 'wavded/vim-stylus'
+        au BufNewFile,BufReadPost *.styl setl tabstop=2 shiftwidth=2 expandtab
     " vim-indent-guides
     NeoBundle 'nathanaelkane/vim-indent-guides'
         let g:indent_guides_auto_colors=0
