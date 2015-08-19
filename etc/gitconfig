@@ -15,6 +15,7 @@
     # 基本設定
     co = checkout
     cob = checkout -b
+    adda = add --all
     cm = commit
     st = status
     ss = status -s
