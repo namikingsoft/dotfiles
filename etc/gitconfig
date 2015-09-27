@@ -29,6 +29,7 @@
     rs = rebase
     df = diff
     ad = add
+    ada = add --all
     adda = add --all
     s  = svn
     # git diff のvimdiff版
