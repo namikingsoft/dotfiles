@@ -15,7 +15,6 @@
     # 基本設定
     co = checkout
     cob = checkout -b
-    ada = add --all
     cm = commit
     st = status
     ss = status -s
@@ -30,6 +29,7 @@
     rs = rebase
     df = diff
     ad = add
+    adda = add --all
     s  = svn
     # git diff のvimdiff版
     vimdiff = difftool --tool=vimdiff --no-prompt
