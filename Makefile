@@ -7,9 +7,9 @@ install: symlink neobundle
 submodule:
 	git submodule init
 	git submodule update
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	ln -fsn ${DOTFILES}/vendor/gitmodules/neobundle.vim ${DOTFILES}/etc/vim/bundle/neobundle.vim
 symlink:
-	chmod -R 755 ${DOTFILES}/bin
 	ln -fs $(DOTFILES)/etc/zshenv ${HOME}/.zshenv
 	ln -fs $(DOTFILES)/etc/zshrc ${HOME}/.zshrc
 	ln -fs $(DOTFILES)/etc/tmux.conf ${HOME}/.tmux.conf
