@@ -80,7 +80,7 @@
     " fugitive
     NeoBundle 'tpope/vim-fugitive'
     " Markdown
-    NeoBundle 'rcmdnk/vim-markdown'
+    NeoBundle 'plasticboy/vim-markdown'
     NeoBundle 'kannokanno/previm'
     NeoBundle 'tyru/open-browser.vim'
         " 折りたたみ設定
@@ -91,6 +91,9 @@
         au BufNewFile,BufReadPost *.{md,mdwn,mkd,mkdn,mark*} setl tabstop=2 shiftwidth=2 expandtab
         " Disable highlight italic in Markdown
         autocmd FileType markdown hi! def link markdownItalic LineNr
+    " PlantUML
+    NeoBundle 'aklt/plantuml-syntax'
+        au BufNewFile,BufReadPost *.{pu,puml} setl tabstop=2 shiftwidth=2 expandtab
     " Qfreplace
     NeoBundle 'thinca/vim-qfreplace'
     " ctrlp
@@ -100,17 +103,23 @@
         au BufRead,BufNewFile {Gemfile,Guardfile,Vagrantfile}          set filetype=ruby
         au BufNewFile,BufReadPost {Gemfile,Guardfile,Vagrantfile}   setl tabstop=2 shiftwidth=2 expandtab
         au BufNewFile,BufReadPost *.rb setl tabstop=2 shiftwidth=2 expandtab
+    " Scala
+    NeoBundle 'derekwyatt/vim-scala'
+        au BufNewFile,BufRead *.scala setf scala
+        au BufNewFile,BufReadPost *.scala setl tabstop=2 shiftwidth=2 expandtab
     " JavaScript
-    NeoBundle 'pangloss/vim-javascript'
+    NeoBundle "pangloss/vim-javascript"
+    NeoBundle "mxw/vim-jsx"
     NeoBundle 'elzr/vim-json'
-        au BufNewFile,BufReadPost *.{js,json} setl tabstop=2 shiftwidth=2 expandtab
+        au BufNewFile,BufReadPost *.{js,jsx,json} setl tabstop=2 shiftwidth=2 expandtab
     " TypeScript
     NeoBundle 'https://github.com/leafgarland/typescript-vim.git'
         au BufNewFile,BufReadPost *.ts setl tabstop=2 shiftwidth=2 expandtab
     " Coffee-Script
     NeoBundle 'kchmck/vim-coffee-script'
-        au BufRead,BufNewFile *.coffee            set filetype=coffee
-        au BufNewFile,BufReadPost *.coffee setl tabstop=2 shiftwidth=2 expandtab
+    NeoBundle 'mtscout6/vim-cjsx'
+        au BufRead,BufNewFile *.{coffee,cjsx}            set filetype=coffee
+        au BufNewFile,BufReadPost *.{coffee,cjsx} setl tabstop=2 shiftwidth=2 expandtab
     " Jade
     NeoBundle 'digitaltoad/vim-jade'
         au BufRead,BufNewFile *.jade            set filetype=jade
@@ -140,6 +149,8 @@
     " Stylus
     NeoBundle 'wavded/vim-stylus'
         au BufNewFile,BufReadPost *.styl setl tabstop=2 shiftwidth=2 expandtab
+    " Dockerfile
+    NeoBundle 'ekalinin/Dockerfile.vim'
     " vim-indent-guides
     NeoBundle 'nathanaelkane/vim-indent-guides'
         let g:indent_guides_auto_colors=0
