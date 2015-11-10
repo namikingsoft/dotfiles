@@ -114,7 +114,7 @@
         au BufNewFile,BufReadPost *.{js,jsx,json} setl tabstop=2 shiftwidth=2 expandtab
     " TypeScript
     NeoBundle 'https://github.com/leafgarland/typescript-vim.git'
-        au BufNewFile,BufReadPost *.ts setl tabstop=2 shiftwidth=2 expandtab
+        au BufNewFile,BufReadPost *.{ts,tsx} setl tabstop=2 shiftwidth=2 expandtab
     " Coffee-Script
     NeoBundle 'kchmck/vim-coffee-script'
     NeoBundle 'mtscout6/vim-cjsx'
