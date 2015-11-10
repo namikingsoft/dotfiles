@@ -6,9 +6,8 @@ export KCODE=u # Ruby用
 export EDITOR=vim
 
 # ユーザー実行ファイル
-PATH=$PATH:$HOME/bin
-PATH=$PATH:$HOME/local/bin
-PATH=$PATH:$HOME/dotfiles/bin
+PATH=$HOME/bin:$PATH
+PATH=$HOME/local/bin:$PATH
 export PATH
 
 # ユーザーライブラリ
