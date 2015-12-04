@@ -3,7 +3,7 @@ DOTFILES := $(shell pwd)
 
 # Makefile
 all: submodule
-install: symlink neobundle
+install: symlink neobundle tpm
 submodule:
 	git submodule init
 	git submodule update
@@ -21,8 +21,10 @@ symlink:
 	-yes n | cp -i $(DOTFILES)/etc/zshrc.local ${HOME}/.zshrc.local
 	-yes n | cp -i $(DOTFILES)/etc/gitconfig.local ${HOME}/.gitconfig.local
 neobundle:
-	vim +NeoBundleInstall +qall
-	vim +NeoBundleClean +qall
+	-yes y | vim +NeoBundleInstall +qall
+	-yes y | vim +NeoBundleClean +qall
+tpm:
+	~/.tmux/plugins/tpm/bin/install_plugins
 lpm:
 	wget -O /tmp/lpm http://www.kasahara.ws/lpm/lpm
 	chmod +x /tmp/lpm
