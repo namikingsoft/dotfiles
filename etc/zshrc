@@ -120,12 +120,8 @@
     alias t="tmux -2"
     # tmux アタッチ
     alias ta="t a"
-    # tmux-session
-    alias ts="tmux-session"
-    # tmux-session save
-    alias tss="tmux-session save"
-    # tmux-session restore
-    alias tsr="tmux-session restore"
+    # vagrant rsync & vagrant ssh
+    alias vssh="vagrant rsync-auto &> /dev/null & vagrant ssh && fg"
     # titanium
     alias ti="titanium"
     # tishadow
@@ -170,6 +166,11 @@
     # nvm
     if [ -s $HOME/.nvm/nvm.sh ]; then
         source $HOME/.nvm/nvm.sh
+    fi
+    # Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
+    export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
+    if [ -d "$GHC_DOT_APP" ]; then
+        export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
     fi
 # }
 
