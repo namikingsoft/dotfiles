@@ -134,8 +134,20 @@
     function docker_compose_exec() {
         docker exec -it $(docker-compose ps | grep $1 | awk '{print $1}') ${@:2}
     }
+    function docker_compose_clean() {
+        docker rm -fv `docker-compose ps -q`
+    }
+    function docker_rm_all() {
+        docker rm -fv `docker ps -aq`
+    }
+    function docker_rmi_none {
+        docker rmi $(sudo docker images -qf "dangling=true")
+    }
     alias fig="docker-compose"
-    alias fig-exec=docker_compose_exec
+    alias fig-exec="docker_compose_exec"
+    alias fig-clean="docker_compose_clean"
+    alias docker-rm-all="docker_rm_all"
+    alias docker-rmi-none="docker_rmi_none"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
