@@ -131,7 +131,11 @@
     # bundle exec spring (noglob)
     alias bes="noglob bundle exec spring"
     # docker-compose
+    function docker_compose_exec() {
+        docker exec -it $(docker-compose ps | grep $1 | awk '{print $1}') ${@:2}
+    }
     alias fig="docker-compose"
+    alias fig-exec=docker_compose_exec
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
