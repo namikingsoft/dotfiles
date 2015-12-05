@@ -1,3 +1,2 @@
-etc/vim/bundle
-etc/vim/sessions
-etc/vim/.netrwhist
+/etc/tmux
+/etc/vim

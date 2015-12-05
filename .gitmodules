@@ -7,3 +7,6 @@
 [submodule "vendor/gitmodules/vimproc.vim"]
 	path = vendor/gitmodules/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "vendor/gitmodules/tpm"]
+	path = vendor/gitmodules/tpm
+	url = https://github.com/tmux-plugins/tpm.git
