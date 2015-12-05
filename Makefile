@@ -22,7 +22,7 @@ symlink:
 	-yes n | cp -i $(DOTFILES)/etc/zshrc.local ${HOME}/.zshrc.local
 	-yes n | cp -i $(DOTFILES)/etc/gitconfig.local ${HOME}/.gitconfig.local
 neobundle:
-	-yes y | vim +VimProcInstall +qall
+	cd etc/vim/bundle/vimproc.vim; make
 	-vim -N -u NONE -i NONE -V1 -e -s --cmd "source ~/.vimrc" --cmd NeoBundleInstall --cmd qall!
 	-yes y | vim +NeoBundleClean +qall
 tpm:
