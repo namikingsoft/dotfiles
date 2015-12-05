@@ -130,6 +130,8 @@
     alias be="noglob bundle exec"
     # bundle exec spring (noglob)
     alias bes="noglob bundle exec spring"
+    # docker-compose
+    alias fig="docker-compose"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
