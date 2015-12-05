@@ -153,6 +153,8 @@
     " HTML5
     NeoBundle 'othree/html5.vim'
         au BufNewFile,BufReadPost *.html setl tabstop=2 shiftwidth=2 expandtab
+    " Shell
+    au BufNewFile,BufReadPost *.sh setl tabstop=2 shiftwidth=2 expandtab
     " Sass
     au BufRead,BufNewFile *.{sass,scss} set filetype=sass
     au BufNewFile,BufReadPost *.{sass,scss} setl tabstop=2 shiftwidth=2 expandtab
