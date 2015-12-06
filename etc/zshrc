@@ -144,10 +144,10 @@
         docker rmi $(sudo docker images -qf "dangling=true")
     }
     alias fig="docker-compose"
-    alias fig-exec="docker_compose_exec"
-    alias fig-clean="docker_compose_clean"
-    alias docker-rm-all="docker_rm_all"
-    alias docker-rmi-none="docker_rmi_none"
+    alias figexec="docker_compose_exec"
+    alias figclean="docker_compose_clean"
+    alias docker-rmall="docker_rm_all"
+    alias docker-rminone="docker_rmi_none"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
