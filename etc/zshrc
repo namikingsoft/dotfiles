@@ -144,8 +144,8 @@
         docker rmi $(sudo docker images -qf "dangling=true")
     }
     alias fig="docker-compose"
-    alias figexec="docker_compose_exec"
-    alias figclean="docker_compose_clean"
+    alias fige="docker_compose_exec"
+    alias fig-clean="docker_compose_clean"
     alias docker-rmall="docker_rm_all"
     alias docker-rminone="docker_rmi_none"
     # php xdebug
