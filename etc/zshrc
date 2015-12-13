@@ -145,7 +145,6 @@
     }
     alias fig="docker-compose"
     alias fige="docker_compose_exec"
-    alias figrun="docker-compose run --rm"
     alias fig-clean="docker_compose_clean"
     alias docker-rmall="docker_rm_all"
     alias docker-rminone="docker_rmi_none"
