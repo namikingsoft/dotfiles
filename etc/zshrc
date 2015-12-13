@@ -143,13 +143,16 @@
     function docker_rmi_none {
         docker rmi $(sudo docker images -qf "dangling=true")
     }
+    function docker_rm_build {
+        docker rm `docker ps -a | grep '/bin/sh -c' | awk '{print $1}'`
+    }
     alias fig="docker-compose"
     alias fige="docker_compose_exec"
     alias figrun="docker-compose run --rm"
     alias fig-clean="docker_compose_clean"
     alias docker-rmall="docker_rm_all"
     alias docker-rminone="docker_rmi_none"
-    alias docker-rmbuild="docker rm `docker ps -a | grep '/bin/sh -c' | awk '{print $1}'`"
+    alias docker-rmbuild="docker_rm_build"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
