@@ -154,6 +154,7 @@
     alias docker-rmall="docker_rm_all"
     alias docker-rminone="docker_rmi_none"
     alias docker-rmbuild="docker_rm_build"
+    alias dom="docker-machine"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
