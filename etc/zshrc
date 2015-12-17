@@ -130,9 +130,10 @@
     alias be="noglob bundle exec"
     # bundle exec spring (noglob)
     alias bes="noglob bundle exec spring"
-    # docker-compose
+    # docker
     function docker_compose_exec() {
-        docker exec -it $(docker-compose ps | grep $1 | awk '{print $1}') ${@:2}
+        NAME=$(fig ps | grep '^[0-9a-zA-Z]' | awk '{print $1}' | grep $1)
+        docker exec -it $(docker ps -qf "name=${NAME}") ${@:2}
     }
     function docker_compose_clean() {
         docker rm -fv `docker-compose ps -q`
