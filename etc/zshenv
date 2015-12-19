@@ -8,6 +8,7 @@ export EDITOR=vim
 # ユーザー実行ファイル
 PATH=$HOME/bin:$PATH
 PATH=$HOME/local/bin:$PATH
+PATH=./bin:$PATH
 PATH=./node_modules/.bin:$PATH
 export PATH
 
