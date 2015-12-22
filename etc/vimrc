@@ -293,10 +293,10 @@
     set foldmethod=marker
     " 改行時のコメント挿入を無効化
     autocmd FileType * setlocal formatoptions-=ro
-    " タブを半角空白４つにする
+    " タブを半角空白2つにする
     set expandtab
-    set tabstop=4
-    set shiftwidth=4
+    set tabstop=2
+    set shiftwidth=2
     " 自動インデント
     set autoindent
     " vim でタブや全角スペースを表示する
