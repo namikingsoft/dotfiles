@@ -155,7 +155,11 @@
             echo "container not found" 1>&2
             return 1
         fi
-        docker exec -it $(docker ps -qf "name=${NAME}") ${@:2}
+        CMD=$2
+        if [ "$CMD" = "" ]; then
+            CMD="bash"
+        fi
+        docker exec -it $(docker ps -qf "name=${NAME}") $CMD ${@:3}
     }
     function docker_compose_clean() {
         docker rm -fv `docker-compose ps -q`
