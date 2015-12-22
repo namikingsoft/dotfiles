@@ -132,7 +132,29 @@
     alias bes="noglob bundle exec spring"
     # docker
     function docker_compose_exec() {
-        NAME=$(fig ps | grep '^[0-9a-zA-Z]' | awk '{print $1}' | grep $1)
+        NAME=""
+        if [ "$NAME" = "" ]; then
+            NAMES=$(fig ps | grep '^[0-9a-zA-Z]' | awk '{print $1}')
+            if [ $(echo $NAMES | grep -c $1) = 1 ]; then
+                NAME=$(echo $NAMES | grep $1)
+            fi
+        fi
+        if [ "$NAME" = "" ]; then
+            BASENAME=$(basename $(pwd))
+            NAMES=$(docker ps --format "{{.Names}}")
+            if [ $(echo $NAMES | grep -c "${BASENAME}_$1") = 1 ]; then
+                NAME=$(echo $NAME | grep "${BASENAME}_$1")
+            fi
+        fi
+        if [ "$NAME" = "" ]; then
+            if [ $(echo $NAMES | grep -c $1) = 1 ]; then
+                NAME=$(echo $NAMES | grep $1)
+            fi
+        fi
+        if [ "$NAME" = "" ]; then
+            echo "container not found" 1>&2
+            return 1
+        fi
         docker exec -it $(docker ps -qf "name=${NAME}") ${@:2}
     }
     function docker_compose_clean() {
