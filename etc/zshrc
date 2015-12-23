@@ -175,6 +175,7 @@
     }
     alias fig="docker-compose"
     alias fige="docker_compose_exec"
+    alias figx="docker-compose --x-networking --x-network-driver overlay"
     alias figrun="docker-compose run --rm"
     alias fig-clean="docker_compose_clean"
     alias docker-rmall="docker_rm_all"
