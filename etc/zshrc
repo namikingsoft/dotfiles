@@ -179,6 +179,7 @@
     alias figno="fign --x-network-driver overlay"
     alias figrun="docker-compose run --rm"
     alias fig-clean="docker_compose_clean"
+    alias fig-cup="fig-clean && fig up -d"
     alias docker-rmall="docker_rm_all"
     alias docker-rminone="docker_rmi_none"
     alias docker-rmbuild="docker_rm_build"
