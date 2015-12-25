@@ -291,6 +291,8 @@
     set formatoptions=q
     " 折りたたみ設定 (マーカー有効)
     set foldmethod=marker
+    " 折りたたみ無効
+    set nofoldenable
     " 改行時のコメント挿入を無効化
     autocmd FileType * setlocal formatoptions-=ro
     " タブを半角空白2つにする
