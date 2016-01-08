@@ -183,6 +183,7 @@
     alias docker-rminone="docker_rmi_none"
     alias docker-rmbuild="docker_rm_build"
     alias dom="docker-machine"
+    alias domfault="eval \$(dom env default)"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
