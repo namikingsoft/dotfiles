@@ -118,8 +118,7 @@
         au BufNewFile,BufRead *.scala setf scala
         au BufNewFile,BufReadPost *.scala setl tabstop=2 shiftwidth=2 expandtab
     " Haskell
-    NeoBundle 'dag/vim2hs'
-        au BufNewFile,BufReadPost *.hs setl tabstop=2 shiftwidth=2 expandtab
+    NeoBundle 'neovimhaskell/haskell-vim'
     " JavaScript
     NeoBundle "pangloss/vim-javascript"
     NeoBundle "mxw/vim-jsx"

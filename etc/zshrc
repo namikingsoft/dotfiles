@@ -175,6 +175,7 @@
     }
     alias fig="docker-compose"
     alias fige="docker_compose_exec"
+    alias figa="docker_compose_exec app"
     alias fign="docker-compose --x-networking"
     alias figno="fign --x-network-driver overlay"
     alias figrun="docker-compose run --rm"
@@ -184,6 +185,8 @@
     alias docker-rmbuild="docker_rm_build"
     alias dom="docker-machine"
     alias domfault="eval \$(dom env default)"
+    # Haskell
+    alias rhs="runhaskell Setup.hs"
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
