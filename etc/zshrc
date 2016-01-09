@@ -173,6 +173,12 @@
     function docker_rm_build {
         docker rm `docker ps -a | grep '/bin/sh -c' | awk '{print $1}'`
     }
+    function docker_machine_eval_env {
+        eval $(docker-machine env ${1-default})
+    }
+    function docker_machine_eval_env_swarm {
+        eval $(docker-machine env --swarm ${1-default})
+    }
     alias fig="docker-compose"
     alias fige="docker_compose_exec"
     alias figa="docker_compose_exec app"
@@ -184,6 +190,8 @@
     alias docker-rminone="docker_rmi_none"
     alias docker-rmbuild="docker_rm_build"
     alias dom="docker-machine"
+    alias dome="docker_machine_eval_env"
+    alias domes="docker_machine_eval_env_swarm"
     alias domfault="eval \$(dom env default)"
     # Haskell
     alias rhs="runhaskell Setup.hs"
