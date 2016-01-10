@@ -255,6 +255,11 @@
     nnoremap <Space>r :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
     " Esc代替(Ctrl + c)
     inoremap <C-c> <Esc>
+    "カーソルを表示行で移動する。物理行移動は<C-n>,<C-p>
+    nnoremap j gj
+    nnoremap k gk
+    nnoremap <Down> gj
+    nnoremap <Up>   gk
 " }
 
 " 基本設定 {
