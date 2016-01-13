@@ -193,6 +193,8 @@
     alias dome="docker_machine_eval_env"
     alias domes="docker_machine_eval_env_swarm"
     alias domfault="eval \$(dom env default)"
+    # Terraform
+    alias tf="terraform"
     # Haskell
     alias rhs="runhaskell Setup.hs"
     # php xdebug
