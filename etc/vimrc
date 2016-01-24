@@ -71,8 +71,7 @@
         endif
         unlet s:local_session_directory
     " Vdebug
-    "NeoBundle 'joonty/vdebug'
-    NeoBundle 'namikingsoft/vdebug'
+    NeoBundle 'joonty/vdebug'
     " smooth-scroll
     NeoBundle 'yonchu/accelerated-smooth-scroll'
         " エイリアス
@@ -118,7 +117,10 @@
         au BufNewFile,BufRead *.scala setf scala
         au BufNewFile,BufReadPost *.scala setl tabstop=2 shiftwidth=2 expandtab
     " Haskell
-    NeoBundle 'neovimhaskell/haskell-vim'
+    " NeoBundle 'neovimhaskell/haskell-vim'
+    " NeoBundle 'travitch/hasksyn'
+    " NeoBundle 'itchyny/vim-haskell-indent'
+    NeoBundle 'dag/vim2hs'
     " JavaScript
     NeoBundle "pangloss/vim-javascript"
     NeoBundle "mxw/vim-jsx"
