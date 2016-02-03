@@ -215,6 +215,8 @@
         export RBENV_ROOT=$HOME/.rbenv
         export PATH="$RBENV_ROOT/bin:$PATH"
         eval "$(rbenv init - zsh)"
+        # @todo without using system
+        export PATH="$RBENV_ROOT/shims:$PATH"
     fi
     # ndenv
     if [ -d $HOME/.ndenv/bin ]; then
