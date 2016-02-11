@@ -244,6 +244,16 @@
     fi
 # }
 
+# PATH環境変数設定 {
+    # @todo zshenvだと、優先度がデフォルトより低くなるため、こっちに移動
+    PATH=$HOME/bin:$PATH
+    PATH=$HOME/local/bin:$PATH
+    PATH=./bin:$PATH
+    PATH=./sbin:$PATH
+    PATH=./node_modules/.bin:$PATH
+    export PATH
+# }
+
 # 外部ファイル読み込み {
     # ローカル用設定ファイル
     [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

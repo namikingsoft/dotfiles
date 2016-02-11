@@ -5,14 +5,6 @@ export KCODE=u # Ruby用
 # エディタ設定
 export EDITOR=vim
 
-# ユーザー実行ファイル
-PATH=$HOME/bin:$PATH
-PATH=$HOME/local/bin:$PATH
-PATH=./bin:$PATH
-PATH=./sbin:$PATH
-PATH=./node_modules/.bin:$PATH
-export PATH
-
 # ユーザーライブラリ
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/local/lib
 export LD_LIBRARY_PATH
