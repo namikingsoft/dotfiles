@@ -16,6 +16,7 @@
     co = checkout
     cob = checkout -b
     cm = commit
+    commita = commit -a
     st = status
     ss = status -s
     ls = log --name-status
