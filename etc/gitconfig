@@ -17,6 +17,7 @@
     cob = checkout -b
     cm = commit
     commita = commit -a
+    wip = commit -a -m "@WIP"
     st = status
     ss = status -s
     ls = log --name-status
