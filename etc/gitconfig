@@ -17,6 +17,7 @@
     cob = checkout -b
     cm = commit
     commita = commit -a
+    commitpr = commit --allow-empty -m 'Make pull request'
     wip = commit -a -m "@WIP"
     st = status
     ss = status -s
