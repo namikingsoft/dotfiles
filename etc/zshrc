@@ -133,8 +133,7 @@
     # npm
     alias npms="npm start"
     alias npme="npm run"
-    alias npmt="npm test"
-    alias npmtw="npm run test:watch"
+    alias npmt="npm run test:watch"
     # docker
     function docker_compose_exec() {
         NAME=""
