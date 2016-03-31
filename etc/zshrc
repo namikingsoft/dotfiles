@@ -131,7 +131,7 @@
     # bundle exec spring (noglob)
     alias bes="noglob bundle exec spring"
     # brew
-    alias brewtree="brew list | xargs brew deps --tree"
+    alias brew-tree="brew list | xargs brew deps --tree"
     # npm
     alias npms="npm start"
     alias npme="npm run"
