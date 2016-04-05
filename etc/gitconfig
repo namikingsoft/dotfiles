@@ -28,6 +28,7 @@
     brdf = branch -D
     pl = pull
     ps = push
+    pushf = push --force-with-lease
     pushe = push heroku master
     mg = merge
     rs = rebase
