@@ -107,6 +107,8 @@
     NeoBundle 'thinca/vim-qfreplace'
     " ctrlp
     NeoBundle 'kien/ctrlp.vim'
+      set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif
+      let g:ctrlp_custom_ignore = '\v[\/](node_modules|build)$'
     " Ruby
     "NeoBundle 'tpope/vim-rails'
         au BufRead,BufNewFile {Gemfile,Guardfile,Vagrantfile}          set filetype=ruby
