@@ -125,9 +125,10 @@
     NeoBundle 'dag/vim2hs'
     " JavaScript
     NeoBundle "othree/yajs.vim"
+    NeoBundle "othree/es.next.syntax.vim"
     NeoBundle "mxw/vim-jsx"
     NeoBundle 'elzr/vim-json'
-        au BufNewFile,BufReadPost *.{js,jsx,json} setl tabstop=2 shiftwidth=2 expandtab
+        au BufNewFile,BufReadPost *.{js,jsx,json,es6} setl tabstop=2 shiftwidth=2 expandtab
     " TypeScript
     NeoBundle 'https://github.com/leafgarland/typescript-vim.git'
         au BufNewFile,BufReadPost *.{ts,tsx} setl tabstop=2 shiftwidth=2 expandtab
