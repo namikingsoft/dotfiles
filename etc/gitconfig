@@ -31,7 +31,8 @@
     ps = push
     pushf = push --force-with-lease
     pushe = push heroku master
-    mg = merge
+    mergef = merge --ff
+    mergefo = merge --ff-only
     rs = rebase
     df = diff
     ad = add
