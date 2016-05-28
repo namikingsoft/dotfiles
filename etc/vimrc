@@ -86,7 +86,7 @@
         noremap <Space>o <ESC>:Unite -vertical -winwidth=40 outline<Return>
     " Ag
     NeoBundle 'rking/ag.vim'
-    " fugitive
+    " fugitive (git)
     NeoBundle 'tpope/vim-fugitive'
     " Markdown
     NeoBundle 'plasticboy/vim-markdown'
