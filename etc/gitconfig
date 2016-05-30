@@ -18,6 +18,7 @@
     cm = commit
     commita = commit -a
     commite = commit --allow-empty
+    commit-amend-now = commit --amend "`date`"
     pr = commit --allow-empty -m 'chore(git): make pull request'
     wip = commit -a -m "WIP"
     st = status
