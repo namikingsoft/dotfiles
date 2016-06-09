@@ -15,31 +15,23 @@
     # 基本設定
     co = checkout
     cob = checkout -b
-    cm = commit
     commita = commit -a
     commite = commit --allow-empty
     commit-amend-now = commit --amend "`date`"
     pr = commit --allow-empty -m 'chore(git): make pull request'
     wip = commit -a -m "WIP"
-    st = status
     ss = status -s
     ls = log --name-status
     br = branch
     brm = branch -m
     brd = branch -d
     brdf = branch -D
-    pl = pull
-    ps = push
     pushf = push --force-with-lease
     pushe = push heroku master
     mergef = merge --ff
     mergefo = merge --ff-only
-    rs = rebase
-    df = diff
-    ad = add
     ada = add --all
     adda = add --all
-    s  = svn
     # git diff のvimdiff版
     vimdiff = difftool --tool=vimdiff --no-prompt
     vdf     = difftool --tool=vimdiff --no-prompt
