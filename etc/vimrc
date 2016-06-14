@@ -101,7 +101,8 @@
         " Disable highlight italic in Markdown
         autocmd FileType markdown hi! def link markdownItalic LineNr
     " PlantUML
-    NeoBundle 'aklt/plantuml-syntax'
+    "NeoBundle 'aklt/plantuml-syntax'
+    NeoBundle 'namikingsoft/plantuml-syntax'
         au BufNewFile,BufReadPost *.{pu,puml} setl tabstop=2 shiftwidth=2 expandtab
     " Qfreplace
     NeoBundle 'thinca/vim-qfreplace'
