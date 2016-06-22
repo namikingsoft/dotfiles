@@ -38,7 +38,7 @@
     # git log の木構造表示
     tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
     # マージ済みのローカルブランチを削除する
-    sweep = !git branch --merged | grep -v '*' | grep -v 'master' | grep -v 'develop' | xargs -I % git branch -d %
+    brdall = !git branch --merged | grep -v '*' | grep -v 'master' | grep -v 'develop' | xargs -I % git branch -d %
     # 管理内のファイル更新を無視する
     ignore = update-index --assume-unchanged
     unignore = update-index --no-assume-unchanged
