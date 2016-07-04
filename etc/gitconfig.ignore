@@ -3,3 +3,4 @@
 Thumbs.db
 .vimsessions
 .vim/sessions
+.env
