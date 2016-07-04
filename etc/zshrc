@@ -137,36 +137,6 @@
     alias npme="npm run"
     alias npmt="npm run test:watch"
     # docker
-    function docker_compose_exec() {
-        NAME=""
-        if [ "$NAME" = "" ]; then
-            NAMES=$(fig ps | grep '^[0-9a-zA-Z]' | awk '{print $1}')
-            if [ $(echo $NAMES | grep -c $1) = 1 ]; then
-                NAME=$(echo $NAMES | grep $1)
-            fi
-        fi
-        if [ "$NAME" = "" ]; then
-            BASENAME=$(basename $(pwd))
-            NAMES=$(docker ps --format "{{.Names}}")
-            if [ $(echo $NAMES | grep -c "${BASENAME}_$1") = 1 ]; then
-                NAME=$(echo $NAME | grep "${BASENAME}_$1")
-            fi
-        fi
-        if [ "$NAME" = "" ]; then
-            if [ $(echo $NAMES | grep -c $1) = 1 ]; then
-                NAME=$(echo $NAMES | grep $1)
-            fi
-        fi
-        if [ "$NAME" = "" ]; then
-            echo "container not found" 1>&2
-            return 1
-        fi
-        CMD=$2
-        if [ "$CMD" = "" ]; then
-            CMD="bash"
-        fi
-        docker exec -it $(docker ps -qf "name=${NAME}") $CMD ${@:3}
-    }
     function docker_compose_clean() {
         docker rm -fv `docker-compose ps -q`
     }
@@ -186,10 +156,8 @@
         eval $(docker-machine env --swarm ${1-default})
     }
     alias fig="docker-compose"
-    alias fige="docker_compose_exec"
-    alias figa="docker_compose_exec app"
-    alias fign="docker-compose --x-networking"
-    alias figno="fign --x-network-driver overlay"
+    alias fige="fig exec"
+    alias figa="fige app"
     alias figrun="docker-compose run --rm"
     alias fig-clean="docker_compose_clean"
     alias docker-rmall="docker_rm_all"
