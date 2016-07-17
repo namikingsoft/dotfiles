@@ -4,3 +4,4 @@ Thumbs.db
 .vimsessions
 .vim/sessions
 .env
+terraform.tfvars
