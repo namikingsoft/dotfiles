@@ -5,3 +5,4 @@ Thumbs.db
 .vim/sessions
 .env
 terraform.tfvars
+terraform.tfstate*
