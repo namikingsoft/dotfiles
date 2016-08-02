@@ -146,6 +146,9 @@
     " Ace
     NeoBundle 'yosssi/vim-ace'
         au BufNewFile,BufReadPost *.ace setl tabstop=2 shiftwidth=2 expandtab
+    " Slim
+    NeoBundle 'slim-template/vim-slim'
+        au BufNewFile,BufReadPost *.slim setl tabstop=2 shiftwidth=2 expandtab
     " Yaml
     NeoBundle 'roalddevries/yaml.vim'
         au BufRead,BufNewFile *.{yml,yaml}         set filetype=yaml
