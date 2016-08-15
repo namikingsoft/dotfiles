@@ -127,8 +127,8 @@
     " JavaScript
     " NeoBundle "othree/yajs.vim"
     " NeoBundle "othree/es.next.syntax.vim"
+    " NeoBundle "mxw/vim-jsx"
     NeoBundle "namikingsoft/ts4js-vim"
-    NeoBundle "mxw/vim-jsx"
     NeoBundle 'elzr/vim-json'
         au BufNewFile,BufReadPost *.{js,jsx,json,es6} setl tabstop=2 shiftwidth=2 expandtab
     " TypeScript
