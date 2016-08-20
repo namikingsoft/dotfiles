@@ -166,8 +166,9 @@
         au BufNewFile,BufReadPost *.html setl tabstop=2 shiftwidth=2 expandtab
     " Shell
     au BufNewFile,BufReadPost *.sh setl tabstop=2 shiftwidth=2 expandtab
-    " Sass
-    au BufRead,BufNewFile *.{sass,scss,pcss} set filetype=sass
+    " Sass/Scss
+    NeoBundle 'cakebaker/scss-syntax.vim'
+    au BufRead,BufNewFile *.{sass,scss,pcss} set filetype=scss.css
     au BufNewFile,BufReadPost *.{sass,scss,pcss} setl tabstop=2 shiftwidth=2 expandtab
     " less
     NeoBundle 'groenewege/vim-less'
