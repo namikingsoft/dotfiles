@@ -167,8 +167,8 @@
     " Shell
     au BufNewFile,BufReadPost *.sh setl tabstop=2 shiftwidth=2 expandtab
     " Sass
-    au BufRead,BufNewFile *.{sass,scss} set filetype=sass
-    au BufNewFile,BufReadPost *.{sass,scss} setl tabstop=2 shiftwidth=2 expandtab
+    au BufRead,BufNewFile *.{sass,scss,pcss} set filetype=sass
+    au BufNewFile,BufReadPost *.{sass,scss,pcss} setl tabstop=2 shiftwidth=2 expandtab
     " less
     NeoBundle 'groenewege/vim-less'
         au BufNewFile,BufReadPost *.less setl tabstop=2 shiftwidth=2 expandtab
