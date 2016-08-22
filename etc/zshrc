@@ -122,10 +122,6 @@
     alias ta="t a"
     # vagrant rsync & vagrant ssh
     alias vssh="vagrant rsync-auto &> /dev/null & vagrant ssh && fg"
-    # titanium
-    alias ti="titanium"
-    # tishadow
-    alias tis="tishadow"
     # bundle exec (noglob)
     alias be="noglob bundle exec"
     # bundle exec spring (noglob)
