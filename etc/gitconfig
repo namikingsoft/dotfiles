@@ -16,7 +16,7 @@
     co = checkout
     cob = checkout -b
     commita = commit -a
-    commite = commit --allow-empty
+    commite = commit --allow-empty -m "Initial Commit"
     commit-amend-now = commit --amend "`date`"
     pr = commit --allow-empty -m 'chore(git): make pull request'
     wip = commit -m "WIP"
