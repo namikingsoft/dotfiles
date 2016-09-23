@@ -20,6 +20,7 @@
     commit-amend-now = commit --amend "`date`"
     pr = commit --allow-empty -m 'chore(git): make pull request'
     wip = commit -m "WIP"
+    wipa = commit -am "WIP"
     ss = status -s
     ls = log --name-status
     br = branch
