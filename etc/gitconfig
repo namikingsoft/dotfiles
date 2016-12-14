@@ -18,7 +18,7 @@
     commita = commit -a
     commite = commit --allow-empty -m 'Initial Commit'
     commit-amend-now = commit --amend "`date`"
-    fetph = fetch --prune
+    fetpr = fetch --prune
     pr = commit --allow-empty -m 'chore(git): make pull request'
     wip = commit -m "WIP"
     wipa = commit -am "WIP"
