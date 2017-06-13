@@ -197,6 +197,10 @@
         export PATH="$HOME/.ndenv/bin:$PATH"
         eval "$(ndenv init - zsh)"
     fi
+    # ndenv
+    if [ -d $HOME/.tfenv/bin ]; then
+        export PATH="$HOME/.tfenv/bin:$PATH"
+    fi
     # pyenv
     if [ -d $HOME/.pyenv/bin ]; then
         export PYENV_ROOT="$HOME/.pyenv"
