@@ -154,7 +154,8 @@
     alias fig="docker-compose"
     alias fige="fig exec"
     alias figa="fige app"
-    alias figrun="docker-compose run --rm"
+    alias figr="docker-compose run --rm"
+    alias figra="figr app"
     alias fig-clean="docker_compose_clean"
     alias docker-rmall="docker_rm_all"
     alias docker-rminone="docker_rmi_none"
@@ -232,3 +233,15 @@
     # ローカル用設定ファイル
     [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 # }
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/namikingsoft/Desktop/lambda2lambda-sandbox/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/namikingsoft/Desktop/lambda2lambda-sandbox/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/namikingsoft/Desktop/lambda2lambda-sandbox/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/namikingsoft/Desktop/lambda2lambda-sandbox/node_modules/tabtab/.completions/sls.zsh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/namikingsoft/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/namikingsoft/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/namikingsoft/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/namikingsoft/google-cloud-sdk/completion.zsh.inc'; fi
