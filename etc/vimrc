@@ -124,6 +124,10 @@
     " NeoBundle 'travitch/hasksyn'
     " NeoBundle 'itchyny/vim-haskell-indent'
     NeoBundle 'dag/vim2hs'
+    " Golang
+    " NeoBundle 'fatih/vim-go'
+    " Rust
+    NeoBundle 'rust-lang/rust.vim'
     " JavaScript
     " NeoBundle "othree/yajs.vim"
     " NeoBundle "othree/es.next.syntax.vim"
