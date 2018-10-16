@@ -266,6 +266,8 @@
         let g:syntastic_javascript_checkers = ['flow', 'eslint']
     " Default Snippets
     NeoBundle 'Shougo/neosnippet-snippets'
+    " Binary Editor
+    NeoBundle 'Shougo/vinarise'
 
     " ファイルタイプ有効化
     filetype plugin indent on
