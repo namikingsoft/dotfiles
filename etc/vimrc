@@ -338,6 +338,16 @@
     "autocmd BufEnter *.{md,mdwn,mkd,mkdn,mark*} autocmd! BufWritePre *
     " 全角記号を入力しても、ずれないようにする
     set ambiwidth=double
+    " バイナリエディタ設定
+    augroup BinaryXXD
+      autocmd!
+      autocmd BufReadPost * if &binary | silent !xxd -g 1
+      autocmd BufReadPost * set ft=xxd | endif
+      autocmd BufWritePre * if &binary | !xxd -r
+      autocmd BufWritePre * endif
+      autocmd BufWritePost * if &binary | silent !xxd -g 1
+      autocmd BufWritePost * set nomod | endif
+    augroup END
 " }
 
 " 検索設定 {
