@@ -332,10 +332,10 @@
     set shiftwidth=2
     " 自動インデント
     set autoindent
+    " use `vim-indent-guides` instead of
     " vim でタブや全角スペースを表示する
-    set list
-    set lcs=tab:>.,trail:~,extends:\
-    highlight SpecialKey cterm=NONE ctermfg=8 guifg=8
+    " set list listchars=tab:¦_
+    " highlight SpecialKey ctermfg=darkmagenta
     highlight JpSpace cterm=underline ctermfg=8 guifg=8
     au BufRead,BufNew * match JpSpace /　/
     " 保存時に行末の空白を除去する
