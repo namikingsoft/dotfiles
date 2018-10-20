@@ -70,8 +70,8 @@
             let g:session_autosave_periodic = 1
         endif
         unlet s:local_session_directory
-    " Vdebug
-    NeoBundle 'joonty/vdebug'
+    " Vdebug for python2
+    NeoBundle 'joonty/vdebug', { 'rev' : '1bff0b1' }
     " smooth-scroll
     NeoBundle 'yonchu/accelerated-smooth-scroll'
         " エイリアス
@@ -124,7 +124,7 @@
     " NeoBundle 'travitch/hasksyn'
     " NeoBundle 'itchyny/vim-haskell-indent'
     NeoBundle 'dag/vim2hs'
-    " Golang
+    " Golang for vim 7.3
     NeoBundle 'fatih/vim-go', { 'rev' : '3030ecc' }
     " Rust
     NeoBundle 'rust-lang/rust.vim'
@@ -237,8 +237,8 @@
         inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
         inoremap <expr><C-y>  neocomplcache#close_popup()
         inoremap <expr><C-e>  neocomplcache#cancel_popup()
-    " neosnippet
-    NeoBundle 'Shougo/neosnippet'
+    " neosnippet for vim 7.3
+    NeoBundle 'Shougo/neosnippet', { 'rev' : 'dcf2d85' }
         " Plugin key-mappings.
         imap <C-k>     <Plug>(neosnippet_expand_or_jump)
         smap <C-k>     <Plug>(neosnippet_expand_or_jump)
