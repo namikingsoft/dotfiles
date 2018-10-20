@@ -125,7 +125,7 @@
     " NeoBundle 'itchyny/vim-haskell-indent'
     NeoBundle 'dag/vim2hs'
     " Golang
-    " NeoBundle 'fatih/vim-go'
+    NeoBundle 'fatih/vim-go', { 'rev' : '3030ecc' }
     " Rust
     NeoBundle 'rust-lang/rust.vim'
     " JavaScript
