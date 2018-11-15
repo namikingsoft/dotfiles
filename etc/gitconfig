@@ -48,3 +48,5 @@
 [push]
     # push形式
     default = matching
+[rebase]
+	autosquash = true
