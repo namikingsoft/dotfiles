@@ -266,8 +266,12 @@
         let g:syntastic_javascript_checkers = ['flow', 'eslint']
     " Default Snippets
     NeoBundle 'Shougo/neosnippet-snippets'
+    " GitHub Actions
+    NeoBundle 'rhysd/vim-github-actions'
     " Binary Editor
     NeoBundle 'Shougo/vinarise'
+    " Nasm
+    " autocmd BufNewFile,BufRead *.asm set filetype=nasm
 
     " ファイルタイプ有効化
     filetype plugin indent on
