@@ -3,13 +3,11 @@ DOTFILES := $(shell pwd)
 
 # Makefile
 all: submodule
-install: symlink neobundle tpm
+install: symlink dein tpm
 submodule:
 	git submodule init
 	git submodule update
 	ln -fsn ${DOTFILES}/vendor/gitmodules/tpm ${DOTFILES}/etc/tmux/plugins/tpm
-	ln -fsn ${DOTFILES}/vendor/gitmodules/neobundle.vim ${DOTFILES}/etc/vim/bundle/neobundle.vim
-	ln -fsn ${DOTFILES}/vendor/gitmodules/vimproc.vim ${DOTFILES}/etc/vim/bundle/vimproc.vim
 symlink:
 	ln -fs $(DOTFILES)/etc/zshenv ${HOME}/.zshenv
 	ln -fs $(DOTFILES)/etc/zshrc ${HOME}/.zshrc
@@ -22,10 +20,10 @@ symlink:
 	ln -fs $(DOTFILES)/etc/gitconfig.ignore ${HOME}/.gitconfig.ignore
 	-yes n | cp -i $(DOTFILES)/etc/zshrc.local ${HOME}/.zshrc.local
 	-yes n | cp -i $(DOTFILES)/etc/gitconfig.local ${HOME}/.gitconfig.local
-neobundle:
-	cd etc/vim/bundle/vimproc.vim; make
-	-vim -N -u NONE -i NONE -V1 -e -s --cmd "source ~/.vimrc" --cmd NeoBundleInstall --cmd qall!
-	-yes y | vim +NeoBundleClean +qall
+dein:
+	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
+	sh /tmp/dein-installer.sh ~/.cache/dein
+	-yes y | vim -N -u NONE -i NONE -V1 -e -s --cmd "source ~/.vimrc" --cmd "call dein#update()" --cmd qall!
 tpm:
 	$(DOTFILES)/etc/tmux/plugins/tpm/bin/install_plugins
 lpm:
