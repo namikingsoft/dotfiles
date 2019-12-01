@@ -199,7 +199,11 @@
         export PATH=/Users/namikingsoft/.ndenv/shims::$PATH # TODO
         eval "$(ndenv init - zsh)"
     fi
-    # ndenv
+    # nvm
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    # tfenv
     if [ -d $HOME/.tfenv/bin ]; then
         export PATH="$HOME/.tfenv/bin:$PATH"
     fi
@@ -213,10 +217,7 @@
     if [ -s "$HOME/.rvm/scripts/rvm" ]; then
         $HOME/.rvm/scripts/rvm
     fi
-    # nvm
-    if [ -s $HOME/.nvm/nvm.sh ]; then
-        source $HOME/.nvm/nvm.sh
-    fi
+
     # Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
     export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
     if [ -d "$GHC_DOT_APP" ]; then
@@ -244,8 +245,4 @@ if [ -f '/Users/namikingsoft/google-cloud-sdk/path.zsh.inc' ]; then source '/Use
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/namikingsoft/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/namikingsoft/google-cloud-sdk/completion.zsh.inc'; fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
