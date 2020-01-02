@@ -164,6 +164,8 @@
     alias dome="docker_machine_eval_env"
     alias domes="docker_machine_eval_env_swarm"
     alias domfault="eval \$(dom env default)"
+    # npm
+    alias npmr="npm run"
     # Terraform
     alias tf="terraform"
     alias ter="terraform"
