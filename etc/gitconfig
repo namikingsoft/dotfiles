@@ -50,3 +50,5 @@
     default = matching
 [rebase]
 	autosquash = true
+[commit]
+	template = ~/.gitmessage.local
