@@ -221,6 +221,10 @@
     if [ -s "$HOME/.rvm/scripts/rvm" ]; then
         $HOME/.rvm/scripts/rvm
     fi
+    # curl https://sh.rustup.rs -sSf | sh
+    if [ -s "$HOME/.cargo/env" ]; then
+      source "$HOME/.cargo/env"
+    fi
 
     # Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
     export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
