@@ -181,7 +181,7 @@
     # http://qiita.com/itkrt2y/items/dee87c406617d1bd45a6
     alias reattach="which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l $SHELL || $SHELL"
     # export .env
-    function expenv {
+    function dotenv {
       export $(cat "${1:-.env}" | grep -v '^#' | grep -v '^$' | xargs)
     }
 # }
