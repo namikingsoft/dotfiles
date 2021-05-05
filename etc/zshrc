@@ -130,7 +130,7 @@
     alias brew-tree="brew list | xargs brew deps --tree"
     # npm
     alias npms="npm start"
-    alias npme="npm run"
+    alias npme="npm run $1 --"
     alias npmt="npm run test:watch"
     # docker
     function docker_compose_clean() {
