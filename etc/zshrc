@@ -198,15 +198,15 @@
         export PATH="$RBENV_ROOT/shims:$PATH"
     fi
     # ndenv
-    # if [ -d $HOME/.ndenv/bin ]; then
-    #     export PATH="$HOME/.ndenv/bin:$PATH"
-    #     export PATH=/Users/namikingsoft/.ndenv/shims::$PATH # TODO
-    #     eval "$(ndenv init - zsh)"
-    # fi
+    if [ -d $HOME/.ndenv/bin ]; then
+        export PATH="$HOME/.ndenv/bin:$PATH"
+        export PATH=/Users/namikingsoft/.ndenv/shims::$PATH # TODO: workaround
+        eval "$(ndenv init - zsh)"
+    fi
     # nvm
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    # export NVM_DIR="$HOME/.nvm"
+    # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
     # tfenv
     if [ -d $HOME/.tfenv/bin ]; then
         export PATH="$HOME/.tfenv/bin:$PATH"
