@@ -151,7 +151,7 @@
     function docker_machine_eval_env_swarm {
         eval $(docker-machine env --swarm ${1-default})
     }
-    alias fig="docker-compose"
+    alias fig="docker compose"
     alias fige="fig exec"
     alias figa="fige app"
     alias figr="docker-compose run --rm"
