@@ -19,9 +19,9 @@
     commite = commit --allow-empty -m 'Initial Commit'
     commit-amend-now = commit --amend "`date`"
     fetpr = fetch --prune
-    pr = commit --allow-empty -m 'chore(git): make pull request'
-    wip = commit -m "WIP"
-    wipa = commit -am "WIP"
+    pr = commit --allow-empty -m 'chore(git): make pull request [ci skip]'
+    wip = commit -m '[ci skip]'
+    wipa = commit -am '[ci skip]'
     ss = status -s
     ls = log --name-status
     br = branch
