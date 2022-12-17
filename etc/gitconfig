@@ -52,3 +52,10 @@
 	autosquash = true
 [commit]
 	template = ~/.gitmessage.local
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg]
+	format = ssh
+[user]
+	signingkey = ~/.ssh/id_rsa.pub
