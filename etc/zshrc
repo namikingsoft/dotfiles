@@ -132,6 +132,8 @@
     alias npms="npm start"
     alias npme="npm run $1 --"
     alias npmt="npm run test:watch"
+    # deno
+    alias denot="deno task"
     # docker
     function docker_compose_clean() {
         docker rm -fv `docker-compose ps -q`
