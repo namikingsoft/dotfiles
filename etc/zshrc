@@ -228,6 +228,10 @@
     if [ -s "$HOME/.cargo/env" ]; then
       source "$HOME/.cargo/env"
     fi
+    # adsf
+    if [ -s "$HOME/.asdf/asdf.sh" ]; then
+      . $HOME/.asdf/asdf.sh
+    fi
 
     # Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
     export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
