@@ -59,3 +59,5 @@
 	format = ssh
 [user]
 	signingkey = ~/.ssh/id_rsa.pub
+[init]
+	defaultBranch = main
