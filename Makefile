@@ -18,6 +18,7 @@ symlink:
 	ln -fs $(DOTFILES)/etc/vimrc ${HOME}/.vimrc
 	ln -fs $(DOTFILES)/etc/gitconfig ${HOME}/.gitconfig
 	ln -fs $(DOTFILES)/etc/gitconfig.ignore ${HOME}/.gitconfig.ignore
+	ln -fs $(DOTFILES)/etc/asdfrc ${HOME}/.asdfrc
 	-yes n | cp -i $(DOTFILES)/etc/zshrc.local ${HOME}/.zshrc.local
 	-yes n | cp -i $(DOTFILES)/etc/gitconfig.local ${HOME}/.gitconfig.local
 	touch ${HOME}/.gitmessage.local
