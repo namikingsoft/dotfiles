@@ -3,7 +3,7 @@ DOTFILES := $(shell pwd)
 
 # Makefile
 all: submodule
-install: symlink dein tpm
+install: symlink dein tpm asdf
 submodule:
 	git submodule init
 	git submodule update
@@ -26,6 +26,13 @@ dein:
 	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
 	sh /tmp/dein-installer.sh ~/.cache/dein
 	-yes y | vim -N -u NONE -i NONE -V1 -e -s --cmd "source ~/.vimrc" --cmd "call dein#update()" --cmd qall!
+asdf:
+	-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+	. ${HOME}/.asdf/asdf.sh
+	-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+	-asdf plugin add deno https://github.com/asdf-community/asdf-deno.git
+	-asdf plugin add kubectl https://github.com/Banno/asdf-kubectl.git
+	-asdf plugin add minikube https://github.com/alvarobp/asdf-minikube.git
 tpm:
 	$(DOTFILES)/etc/tmux/plugins/tpm/bin/install_plugins
 lpm:
