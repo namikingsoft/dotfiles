@@ -26,6 +26,8 @@
     bindkey "^[[Z" reverse-menu-complete
     # コマンドのスペルを訂正しない
     unsetopt correctall
+    # kubectl
+    [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 # }
 
 # コマンド履歴 {
@@ -166,6 +168,9 @@
     alias dome="docker_machine_eval_env"
     alias domes="docker_machine_eval_env_swarm"
     alias domfault="eval \$(dom env default)"
+    # kubectl
+    alias kube="kubectl"
+    alias kubec="kubectl"
     # Terraform
     alias tf="terraform"
     alias ter="terraform"
