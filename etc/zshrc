@@ -173,6 +173,9 @@
     # kubectl
     alias kube="kubectl"
     alias kubec="kubectl"
+    alias kubea="kubectl apply -f"
+    alias kubed="kubectl delete -f"
+    alias kubeb="kubectl run busybox --image=busybox --image-pull-policy=IfNotPresent --restart=Never -it --rm"
     # Terraform
     alias tf="terraform"
     alias ter="terraform"
