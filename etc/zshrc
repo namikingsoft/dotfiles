@@ -28,6 +28,8 @@
     unsetopt correctall
     # kubectl
     [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+    # minikube
+    [[ $commands[minikube] ]] && source <(minikube completion zsh)
 # }
 
 # コマンド履歴 {
