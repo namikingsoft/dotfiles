@@ -176,6 +176,13 @@
     alias kubea="kubectl apply -f"
     alias kubed="kubectl delete -f"
     alias kubeb="kubectl run busybox --image=busybox --image-pull-policy=IfNotPresent --restart=Never -it --rm"
+    function kuben {
+      if [ "${1:-undef}" = "undef" ]; then
+        kubectl config get-contexts
+      else
+        kubectl config set-context $(kubectl config current-context) --namespace=$1
+      fi
+    }
     # Terraform
     alias tf="terraform"
     alias ter="terraform"
