@@ -14,7 +14,6 @@ symlink:
 	ln -fsn $(DOTFILES)/etc/tmux ${HOME}/.tmux
 	ln -fs $(DOTFILES)/etc/tmux.conf ${HOME}/.tmux.conf
 	ln -fs $(DOTFILES)/etc/tmux-powerlinerc ${HOME}/.tmux-powerlinerc
-	ln -fsn $(DOTFILES)/etc/vim ${HOME}/.vim
 	ln -fs $(DOTFILES)/etc/vimrc ${HOME}/.vimrc
 	ln -fs $(DOTFILES)/etc/gitconfig ${HOME}/.gitconfig
 	ln -fs $(DOTFILES)/etc/gitconfig.ignore ${HOME}/.gitconfig.ignore
