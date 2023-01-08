@@ -222,12 +222,68 @@ if dein#load_state('~/.cache/dein')
     " Nasm
     " autocmd BufNewFile,BufRead *.asm set filetype=nasm
 
-    " ファイルタイプ有効化
-    filetype plugin indent on
-
     call dein#end()
     call dein#save_state()
 endif
+
+" 標準プラグイン設定 {
+    " ファイルタイプ有効化
+    filetype plugin indent on
+
+    " Netrw - 標準ファイラ
+    " :e . - カレントバッファで開く
+    " :tabe . - 新タブで開く
+    " :Lex . - カレントタブの左側で開く
+    " ツリー表示
+    let g:netrw_liststyle = 3
+    " 開いた位置を current dir として扱う
+    let g:netrw_keepdir = 0
+    " トップバナー非表示
+    let g:netrw_banner = 0
+    " window サイズ
+    let g:netrw_winsize = 20
+    " Ctrl + e で Lexplore をトグルする
+    " https://www.reddit.com/r/vim/comments/6jcyfj/comment/djdmsal/
+    let g:netrw_fastbrowse = 0
+    autocmd FileType netrw setl bufhidden=wipe
+    let g:NetrwIsOpen=0
+    function! ToggleNetrw()
+        if g:NetrwIsOpen
+            let i = bufnr("$")
+            while (i >= 1)
+                if (getbufvar(i, "&filetype") == "netrw")
+                    silent exe "bwipeout " . i
+                endif
+                let i-=1
+            endwhile
+            let g:NetrwIsOpen=0
+        else
+            let g:NetrwIsOpen=1
+            silent Lexplore
+        endif
+    endfunction
+    noremap <silent> <C-E> :call ToggleNetrw()<CR>
+    " Lexplore などで選択後、netrw バッファを閉じるように
+    " Close after opening a file (which gets opened in another window):
+    " https://stackoverflow.com/questions/61766814/close-netrw-explorer-after-opening-a-new-file
+    let g:netrw_fastbrowse = 0
+    autocmd FileType netrw setl bufhidden=wipe
+    function! CloseNetrw() abort
+      for bufn in range(1, bufnr('$'))
+        if bufexists(bufn) && getbufvar(bufn, '&filetype') ==# 'netrw'
+          silent! execute 'bwipeout ' . bufn
+          if getline(2) =~# '^" Netrw '
+            silent! bwipeout
+          endif
+          return
+        endif
+      endfor
+    endfunction
+    augroup closeOnOpen
+      autocmd!
+      autocmd BufWinEnter * if getbufvar(winbufnr(winnr()), "&filetype") != "netrw"|call CloseNetrw()|endif
+    aug END
+" }
 
 " キーバインド {
     " 設定ファイル編集(Space + .)
