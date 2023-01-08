@@ -3,7 +3,7 @@ DOTFILES := $(shell pwd)
 
 # Makefile
 all: submodule
-install: symlink dein tpm asdf
+install: symlink tpm asdf
 submodule:
 	git submodule init
 	git submodule update
@@ -22,10 +22,6 @@ symlink:
 	-yes n | cp -i $(DOTFILES)/etc/zshrc.local ${HOME}/.zshrc.local
 	-yes n | cp -i $(DOTFILES)/etc/gitconfig.local ${HOME}/.gitconfig.local
 	touch ${HOME}/.gitmessage.local
-dein:
-	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
-	sh /tmp/dein-installer.sh ~/.cache/dein
-	-yes y | vim -N -u NONE -i NONE -V1 -e -s --cmd "source ~/.vimrc" --cmd "call dein#update()" --cmd qall!
 asdf:
 	-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 	. ${HOME}/.asdf/asdf.sh
