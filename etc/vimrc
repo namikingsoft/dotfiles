@@ -359,7 +359,7 @@ endif
     " vim でタブや全角スペースを表示する
     " set list listchars=tab:¦_
     " highlight SpecialKey ctermfg=darkmagenta
-    highlight JpSpace cterm=underline ctermfg=8 guifg=8
+    highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
     au BufRead,BufNew * match JpSpace /　/
     " 保存時に行末の空白を除去する
     "autocmd BufEnter * autocmd BufWritePre * :%s/\s\+$//ge
