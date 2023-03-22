@@ -51,9 +51,3 @@ tpm:
 .PHONY: tmux
 tmux: brew tpm
 	brew install tmux
-
-.PHONY: lpm
-lpm:
-	wget -O /tmp/lpm http://www.kasahara.ws/lpm/lpm
-	chmod +x /tmp/lpm
-	/tmp/lpm --local local initlocaldir
