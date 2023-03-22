@@ -1,13 +1,18 @@
-# Var
 DOTFILES := $(shell pwd)
 
-# Makefile
+.PHONY: all
 all: submodule
+
+.PHONY: install
 install: symlink tpm asdf
+
+.PHONY: submodule
 submodule:
 	git submodule init
 	git submodule update
 	ln -fsn ${DOTFILES}/vendor/gitmodules/tpm ${DOTFILES}/etc/tmux/plugins/tpm
+
+.PHONY: symlink
 symlink:
 	ln -fs $(DOTFILES)/etc/zshenv ${HOME}/.zshenv
 	ln -fs $(DOTFILES)/etc/zshrc ${HOME}/.zshrc
@@ -21,6 +26,8 @@ symlink:
 	-yes n | cp -i $(DOTFILES)/etc/zshrc.local ${HOME}/.zshrc.local
 	-yes n | cp -i $(DOTFILES)/etc/gitconfig.local ${HOME}/.gitconfig.local
 	touch ${HOME}/.gitmessage.local
+
+.PHONY: asdf
 asdf:
 	-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 	. ${HOME}/.asdf/asdf.sh
@@ -28,8 +35,12 @@ asdf:
 	-asdf plugin add deno https://github.com/asdf-community/asdf-deno.git
 	-asdf plugin add kubectl https://github.com/Banno/asdf-kubectl.git
 	-asdf plugin add minikube https://github.com/alvarobp/asdf-minikube.git
+
+.PHONY: tpm
 tpm:
 	$(DOTFILES)/etc/tmux/plugins/tpm/bin/install_plugins
+
+.PHONY: lpm
 lpm:
 	wget -O /tmp/lpm http://www.kasahara.ws/lpm/lpm
 	chmod +x /tmp/lpm
