@@ -20,28 +20,6 @@ endif
     " プラグイン設定
     " lightline
     call dein#add('itchyny/lightline.vim')
-    " Vim-Session
-    " 最適化するまで無効化
-    "call dein#add('xolox/vim-misc')
-    "call dein#add('xolox/vim-session')
-    "    " セッションディレクトリがなければ保存しない
-    "    let g:session_autosave = 'no'
-    "    let g:session_autoload = 'no'
-    "    let g:session_autosave_periodic = 0
-    "    let g:session_lock_enabled = 0
-    "    " 現在のディレクトリ直下の .vimsessions/ を取得
-    "    let s:local_session_directory = xolox#misc#path#merge(getcwd(), '.vimsessions')
-    "    let g:session_directory = s:local_session_directory
-    "    " 存在すれば
-    "    if isdirectory(s:local_session_directory)
-    "        " vimを辞める時に自動保存
-    "        let g:session_autosave = 'yes'
-    "        " 引数なしでvimを起動した時にsession保存ディレクトリのdefault.vimを開く
-    "        let g:session_autoload = 'yes'
-    "        " 1分間に1回自動保存
-    "        let g:session_autosave_periodic = 1
-    "    endif
-    "    unlet s:local_session_directory
     " Vdebug for python2
     call dein#add('joonty/vdebug', { 'rev': '1bff0b1' })
     " smooth-scroll
@@ -82,28 +60,17 @@ endif
     call dein#add('kien/ctrlp.vim')
         set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif
         let g:ctrlp_custom_ignore = '\v[\/](node_modules|build)$'
-    " Ruby
-    "call dein#add('tpope/vim-rails')
-        au BufRead,BufNewFile {Gemfile,Guardfile,Vagrantfile}          set filetype=ruby
-        au BufNewFile,BufReadPost {Gemfile,Guardfile,Vagrantfile}   setl tabstop=2 shiftwidth=2 expandtab
-        au BufNewFile,BufReadPost *.rb setl tabstop=2 shiftwidth=2 expandtab
     " Scala
     call dein#add('derekwyatt/vim-scala')
         au BufNewFile,BufRead *.scala setf scala
         au BufNewFile,BufReadPost *.scala setl tabstop=2 shiftwidth=2 expandtab
     " Haskell
-    " call dein#add('neovimhaskell/haskell-vim')
-    " call dein#add('travitch/hasksyn')
-    " call dein#add('itchyny/vim-haskell-indent')
     call dein#add('dag/vim2hs')
     " Golang for vim 7.3
     call dein#add('fatih/vim-go', { 'rev' : '3030ecc' })
     " Rust
     call dein#add('rust-lang/rust.vim')
     " JavaScript
-    " call dein#add("othree/yajs.vim")
-    " call dein#add("othree/es.next.syntax.vim")
-    " call dein#add("mxw/vim-jsx")
     call dein#add('namikingsoft/ts4js-vim')
     call dein#add('elzr/vim-json')
         au BufNewFile,BufReadPost *.{js,jsx,json,es6} setl tabstop=2 shiftwidth=2 expandtab
@@ -163,38 +130,6 @@ endif
         autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=234
         let g:indent_guides_enable_on_vim_startup=1
         let g:indent_guides_guide_size=1
-    " neocompicache
-    " TODO: 補間時にエラーが出てうまく操作できないので、設定を見直す
-    " call dein#add('Shougo/neocomplcache.vim')
-    "    " Disable AutoComplPop.
-    "    let g:acp_enableAtStartup = 0
-    "    " Use neocomplcache.
-    "    let g:neocomplcache_enable_at_startup = 1
-    "    " Use smartcase.
-    "    let g:neocomplcache_enable_smart_case = 1
-    "    " Set minimum syntax keyword length.
-    "    let g:neocomplcache_min_syntax_length = 3
-    "    let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-    "    " Define dictionary.
-    "    let g:neocomplcache_dictionary_filetype_lists = {
-    "        \ 'default' : ''
-    "        \ }
-    "    " Plugin key-mappings.
-    "    inoremap <expr><C-g>     neocomplcache#undo_completion()
-    "    inoremap <expr><C-l>     neocomplcache#complete_common_string()
-    "    " Recommended key-mappings.
-    "    " <CR>: close popup and save indent.
-    "    inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-    "    function! s:my_cr_function()
-    "    return neocomplcache#smart_close_popup() . "\<CR>"
-    "    endfunction
-    "    " <TAB>: completion.
-    "    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-    "    " <C-h>, <BS>: close popup and delete backword char.
-    "    inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-    "    inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-    "    inoremap <expr><C-y>  neocomplcache#close_popup()
-    "    inoremap <expr><C-e>  neocomplcache#cancel_popup()
     " neosnippet for vim 7.3
     call dein#add('Shougo/neosnippet', { 'rev' : 'dcf2d85' })
         " Plugin key-mappings.
@@ -382,8 +317,4 @@ endif
     set hlsearch
     " grepコマンドでQuickFixを開くように
     autocmd QuickFixCmdPost vimgrep copen
-    " vimgrep をデフォルトのgrepとする場合internal
-    "set grepprg=internal
-    " w,bの移動で認識する文字
-    "set iskeyword=a-z,A-Z,48-57,_,.,-,>
 " }
