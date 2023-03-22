@@ -4,7 +4,7 @@ DOTFILES := $(shell pwd)
 all: submodule
 
 .PHONY: install
-install: symlink tpm asdf brew peco
+install: symlink asdf brew peco tmux
 
 .PHONY: submodule
 submodule:
@@ -47,6 +47,10 @@ peco: brew
 .PHONY: tpm
 tpm:
 	$(DOTFILES)/etc/tmux/plugins/tpm/bin/install_plugins
+
+.PHONY: tmux
+tmux: brew tpm
+	brew install tmux
 
 .PHONY: lpm
 lpm:
