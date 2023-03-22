@@ -4,7 +4,7 @@ DOTFILES := $(shell pwd)
 all: submodule
 
 .PHONY: install
-install: symlink tpm asdf brew
+install: symlink tpm asdf brew peco
 
 .PHONY: submodule
 submodule:
@@ -39,6 +39,10 @@ asdf:
 .PHONY: brew
 brew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+.PHONY: peco
+peco: brew
+	brew install peco
 
 .PHONY: tpm
 tpm:
