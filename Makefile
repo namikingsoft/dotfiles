@@ -4,7 +4,7 @@ DOTFILES := $(shell pwd)
 all: submodule
 
 .PHONY: install
-install: symlink tpm asdf
+install: symlink tpm asdf brew
 
 .PHONY: submodule
 submodule:
@@ -35,6 +35,10 @@ asdf:
 	-asdf plugin add deno https://github.com/asdf-community/asdf-deno.git
 	-asdf plugin add kubectl https://github.com/Banno/asdf-kubectl.git
 	-asdf plugin add minikube https://github.com/alvarobp/asdf-minikube.git
+
+.PHONY: brew
+brew:
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 .PHONY: tpm
 tpm:
