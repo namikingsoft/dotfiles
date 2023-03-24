@@ -38,7 +38,11 @@ asdf:
 
 .PHONY: brew
 brew:
+ifdef $(shell hash brew)
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+	@echo $@ already installed
+endif
 
 .PHONY: git
 git: brew
