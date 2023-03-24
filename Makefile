@@ -60,3 +60,10 @@ tmux: brew tpm
 .PHONY: mas
 mas: brew
 	brew install mas
+
+.PHONY: masinstall
+masinstall: mas
+	cat etc/maslist | awk '{print $1}' | xargs -n1 mas install
+
+etc/maslist:
+	mas list | awk '{NF=NF-1}1' | grep -vxFf etc/masignore > $@
