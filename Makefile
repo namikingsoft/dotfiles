@@ -4,7 +4,7 @@ DOTFILES := $(shell pwd)
 all: submodule
 
 .PHONY: install
-install: symlink asdf brew git peco tmux mas
+install: symlink asdf brew git peco tmux mas masapps
 
 .PHONY: submodule
 submodule:
@@ -66,7 +66,7 @@ mas: brew
 	brew install mas
 
 .PHONY: masinstall
-masinstall: mas
+masapps: mas
 	cat etc/maslist | awk '{print $$1}' | xargs -n1 mas install
 
 etc/maslist:
