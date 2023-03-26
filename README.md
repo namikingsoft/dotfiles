@@ -16,5 +16,5 @@ Commands
 
 It ignores apps are listed in `/etc/masignore`.
 ```sh
-make /etc/maslist
+make -B /etc/maslist
 ```
