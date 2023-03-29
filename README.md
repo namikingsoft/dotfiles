@@ -22,12 +22,12 @@ make -B etc/.asdflist
 
 It ignores apps are listed in `/etc/caskignore`.
 ```sh
-make -B /etc/casklist
+make -B etc/casklist
 ```
 
 ### Save apple store apps list
 
 It ignores apps are listed in `/etc/masignore`.
 ```sh
-make -B /etc/maslist
+make -B etc/maslist
 ```
