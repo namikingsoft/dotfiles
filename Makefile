@@ -44,6 +44,16 @@ else
 	@echo $@ already installed
 endif
 
+.PHONY: cask
+cask: brew
+	brew install --cask google-chrome
+	brew install --cask firefox
+	brew instala --cask iterm2
+	brew instala --cask authy
+	brew install --cask bettertouchtool
+	brew install --cask karabiner-elements
+	brew install --cask google-japanese-ime
+
 .PHONY: git
 git: brew
 	brew install git
