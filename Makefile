@@ -13,19 +13,45 @@ submodule:
 	ln -fsn ${DOTFILES}/vendor/gitmodules/tpm ${DOTFILES}/etc/tmux/plugins/tpm
 
 .PHONY: symlink
-symlink:
-	ln -fs $(DOTFILES)/etc/zshenv ${HOME}/.zshenv
-	ln -fs $(DOTFILES)/etc/zshrc ${HOME}/.zshrc
-	ln -fsn $(DOTFILES)/etc/tmux ${HOME}/.tmux
-	ln -fs $(DOTFILES)/etc/tmux.conf ${HOME}/.tmux.conf
-	ln -fs $(DOTFILES)/etc/tmux-powerlinerc ${HOME}/.tmux-powerlinerc
-	ln -fs $(DOTFILES)/etc/vimrc ${HOME}/.vimrc
-	ln -fs $(DOTFILES)/etc/gitconfig ${HOME}/.gitconfig
-	ln -fs $(DOTFILES)/etc/gitconfig.ignore ${HOME}/.gitconfig.ignore
-	ln -fs $(DOTFILES)/etc/asdfrc ${HOME}/.asdfrc
-	-yes n | cp -i $(DOTFILES)/etc/zshrc.local ${HOME}/.zshrc.local
-	-yes n | cp -i $(DOTFILES)/etc/gitconfig.local ${HOME}/.gitconfig.local
-	touch ${HOME}/.gitmessage.local
+symlink: \
+	${HOME}/.zshrc \
+	${HOME}/.gitconfig \
+	${HOME}/.tmux.conf \
+	${HOME}/.vimrc \
+	${HOME}/.asdfrc
+
+${HOME}/.zshrc: ${HOME}/.zshenv ${HOME}/.zshrc.local
+	ln -fs $(DOTFILES)/etc/.zshrc ${HOME}/.zshrc
+
+${HOME}/.zshenv:
+	ln -fs $(DOTFILES)/etc/.zshenv ${HOME}/.zshenv
+
+${HOME}/.zshrc.local:
+	-yes n | cp -i $(DOTFILES)/etc/.zshrc.local ${HOME}/.zshrc.local
+
+${HOME}/.gitconfig: ${HOME}/.gitconfig.ignore ${HOME}/.gitconfig.local
+	ln -fs $(DOTFILES)/etc/.gitconfig ${HOME}/.gitconfig
+
+${HOME}/.gitconfig.ignore:
+	ln -fs $(DOTFILES)/etc/.gitconfig.ignore ${HOME}/.gitconfig.ignore
+
+${HOME}/.gitconfig.local:
+	-yes n | cp -i $(DOTFILES)/etc/.gitconfig.local ${HOME}/.gitconfig.local
+
+${HOME}/.tmux.conf: ${HOME}/.tmux-powerlinerc ${HOME}/.tmux
+	ln -fs $(DOTFILES)/etc/.tmux.conf ${HOME}/.tmux.conf
+
+${HOME}/.tmux-powerlinerc:
+	ln -fs $(DOTFILES)/etc/.tmux-powerlinerc ${HOME}/.tmux-powerlinerc
+
+${HOME}/.tmux:
+	ln -fsn $(DOTFILES)/etc/.tmux ${HOME}/.tmux
+
+${HOME}/.vimrc:
+	ln -fs $(DOTFILES)/etc/.vimrc ${HOME}/.vimrc
+
+${HOME}/.asdfrc:
+	ln -fs $(DOTFILES)/etc/.asdfrc ${HOME}/.asdfrc
 
 .PHONY: asdf
 asdf:
