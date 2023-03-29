@@ -57,10 +57,10 @@ ${HOME}/.asdfrc:
 asdf:
 	ln -fsn ${DOTFILES}/vendor/gitmodules/asdf ${HOME}/.asdf
 	. ${HOME}/.asdf/asdf.sh
-	-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-	-asdf plugin add deno https://github.com/asdf-community/asdf-deno.git
-	-asdf plugin add kubectl https://github.com/Banno/asdf-kubectl.git
-	-asdf plugin add minikube https://github.com/alvarobp/asdf-minikube.git
+	cat etc/.asdflist | xargs -L1 asdf plugin add
+
+etc/.asdflist:
+	asdf plugin list --urls > $@
 
 .PHONY: brew
 brew:

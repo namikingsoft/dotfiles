@@ -12,6 +12,12 @@ make install
 Notes
 -----------------------------
 
+### Save asdf plugin list
+
+```sh
+make -B etc/.asdflist
+```
+
 ### Save cask apps list
 
 It ignores apps are listed in `/etc/caskignore`.
