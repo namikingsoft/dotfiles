@@ -4,7 +4,7 @@ DOTFILES := $(shell pwd)
 all: submodule
 
 .PHONY: install
-install: symlink asdf brew git peco tmux mas masapps
+install: symlink asdf brew git peco tmux mas masapps cask
 
 .PHONY: submodule
 submodule:
