@@ -4,7 +4,7 @@ DOTFILES := $(shell pwd)
 all: submodule
 
 .PHONY: install
-install: symlink asdf brew git peco tmux mas masapps cask
+install: symlink asdf brew brewapps mas masapps cask
 
 .PHONY: submodule
 submodule:
@@ -53,15 +53,6 @@ ${HOME}/.vimrc:
 ${HOME}/.asdfrc:
 	ln -fs $(DOTFILES)/etc/.asdfrc ${HOME}/.asdfrc
 
-.PHONY: asdf
-asdf:
-	ln -fsn ${DOTFILES}/vendor/gitmodules/asdf ${HOME}/.asdf
-	. ${HOME}/.asdf/asdf.sh
-	cat etc/.asdflist | xargs -L1 asdf plugin add || true
-
-etc/.asdflist:
-	asdf plugin list --urls > $@
-
 .PHONY: brew
 brew:
 ifdef $(shell hash brew)
@@ -70,21 +61,15 @@ else
 	@echo $@ already installed
 endif
 
-.PHONY: git
-git: brew
+.PHONY: brewapps
+brewapps: brew
 	brew install git
-
-.PHONY: peco
-peco: brew
+	brew install tmux
 	brew install peco
 
 .PHONY: tpm
 tpm: brew
 	$(DOTFILES)/etc/tmux/plugins/tpm/bin/install_plugins
-
-.PHONY: tmux
-tmux: brew
-	brew install tmux
 
 .PHONY: mas
 mas: brew
@@ -103,3 +88,12 @@ cask: brew
 
 etc/casklist:
 	brew list --cask | grep -vxFf etc/caskignore > $@
+
+.PHONY: asdf
+asdf:
+	ln -fsn ${DOTFILES}/vendor/gitmodules/asdf ${HOME}/.asdf
+	. ${HOME}/.asdf/asdf.sh
+	cat etc/.asdflist | xargs -L1 asdf plugin add || true
+
+etc/.asdflist:
+	asdf plugin list --urls > $@
