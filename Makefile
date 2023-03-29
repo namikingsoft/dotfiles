@@ -53,13 +53,12 @@ peco: brew
 	brew install peco
 
 .PHONY: tpm
-tpm:
+tpm: brew
 	$(DOTFILES)/etc/tmux/plugins/tpm/bin/install_plugins
 
 .PHONY: tmux
-tmux: brew tpm
+tmux: brew
 	brew install tmux
-	brew install ricty
 
 .PHONY: mas
 mas: brew
