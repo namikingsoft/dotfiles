@@ -4,3 +4,6 @@
 [submodule "vendor/gitmodules/tpm"]
 	path = vendor/gitmodules/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "vendor/gitmodules/asdf"]
+	path = vendor/gitmodules/asdf
+	url = https://github.com/asdf-vm/asdf.git

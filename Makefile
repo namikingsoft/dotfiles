@@ -55,7 +55,7 @@ ${HOME}/.asdfrc:
 
 .PHONY: asdf
 asdf:
-	-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+	ln -fsn ${DOTFILES}/vendor/gitmodules/asdf ${HOME}/.asdf
 	. ${HOME}/.asdf/asdf.sh
 	-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 	-asdf plugin add deno https://github.com/asdf-community/asdf-deno.git
