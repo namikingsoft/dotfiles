@@ -74,7 +74,7 @@ tmux: brew
 mas: brew
 	brew install mas
 
-.PHONY: masinstall
+.PHONY: masapps
 masapps: mas
 	cat etc/maslist | awk '{print $$1}' | xargs -n1 mas install
 
