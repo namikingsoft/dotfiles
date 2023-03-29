@@ -57,7 +57,7 @@ ${HOME}/.asdfrc:
 asdf:
 	ln -fsn ${DOTFILES}/vendor/gitmodules/asdf ${HOME}/.asdf
 	. ${HOME}/.asdf/asdf.sh
-	cat etc/.asdflist | xargs -L1 asdf plugin add
+	cat etc/.asdflist | xargs -L1 asdf plugin add || true
 
 etc/.asdflist:
 	asdf plugin list --urls > $@
