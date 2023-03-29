@@ -10,7 +10,7 @@ install: symlink asdf brew git peco tmux mas masapps cask
 submodule:
 	git submodule init
 	git submodule update
-	ln -fsn ${DOTFILES}/vendor/gitmodules/tpm ${DOTFILES}/etc/tmux/plugins/tpm
+	ln -fsn ${DOTFILES}/vendor/gitmodules/tpm ${DOTFILES}/etc/.tmux/plugins/tpm
 
 .PHONY: symlink
 symlink: \
