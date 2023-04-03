@@ -66,6 +66,7 @@ brewapps: brew
 	brew install git
 	brew install tmux
 	brew install peco
+	brew install awscli
 
 .PHONY: tpm
 tpm: brew
