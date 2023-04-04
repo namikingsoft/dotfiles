@@ -1,3 +1,4 @@
+awscli                       https://github.com/MetricMike/asdf-awscli.git
 deno                         https://github.com/asdf-community/asdf-deno.git
 kubectl                      https://github.com/Banno/asdf-kubectl.git
 minikube                     https://github.com/alvarobp/asdf-minikube.git
