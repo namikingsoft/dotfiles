@@ -235,6 +235,11 @@
       . $HOME/.asdf/asdf.sh
     fi
 
+    # aqua
+    if [ -d "${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin" ]; then
+      export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
+    fi
+
     # Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
     export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
     if [ -d "$GHC_DOT_APP" ]; then
