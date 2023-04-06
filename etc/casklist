@@ -4,6 +4,7 @@ docker
 firefox
 google-chrome
 google-japanese-ime
+graphql-playground
 iterm2
 karabiner-elements
 visual-studio-code
