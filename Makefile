@@ -64,6 +64,7 @@ endif
 .PHONY: brewapps
 brewapps: brew
 	brew install git
+	brew install jq
 	brew install tmux
 	brew install peco
 	brew install aquaproj/aqua/aqua
