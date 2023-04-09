@@ -10,7 +10,6 @@ install: symlink asdf brew brewapps mas masapps cask
 submodule:
 	git submodule init
 	git submodule update
-	ln -fsn ${DOTFILES}/vendor/gitmodules/tpm ${DOTFILES}/etc/.tmux/plugins/tpm
 
 .PHONY: symlink
 symlink: \
@@ -39,14 +38,15 @@ ${HOME}/.gitconfig.ignore:
 ${HOME}/.gitconfig.local:
 	-yes n | cp -i $(DOTFILES)/etc/.gitconfig.local ${HOME}/.gitconfig.local
 
-${HOME}/.tmux.conf: ${HOME}/.tmux-powerlinerc ${HOME}/.tmux
+${HOME}/.tmux.conf: ${HOME}/.tmux-powerlinerc ${HOME}/.tmux/plugins/tpm
 	ln -fs $(DOTFILES)/etc/.tmux.conf ${HOME}/.tmux.conf
 
 ${HOME}/.tmux-powerlinerc:
 	ln -fs $(DOTFILES)/etc/.tmux-powerlinerc ${HOME}/.tmux-powerlinerc
 
-${HOME}/.tmux:
-	ln -fsn $(DOTFILES)/etc/.tmux ${HOME}/.tmux
+${HOME}/.tmux/plugins/tpm:
+	mkdir -p ${HOME}/.tmux/plugins
+	ln -fsn ${DOTFILES}/vendor/gitmodules/tpm ${HOME}/.tmux/plugins/tpm
 
 ${HOME}/.vimrc:
 	ln -fs $(DOTFILES)/etc/.vimrc ${HOME}/.vimrc
