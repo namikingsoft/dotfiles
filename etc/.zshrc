@@ -202,7 +202,7 @@
     }
     # encrypted volume on icloud
     alias encmount="hdiutil mount ~/Library/Mobile\ Documents/com~apple~CloudDocs/encrypted.dmg"
-    alias encdetach="hdiutil detach /Volumes/encrypted"
+    alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
       # NOTE: `.` command is `source`
       encmount && . "$(find /Volumes/encrypted/env -name '*.txt' | peco)" && encdetach
