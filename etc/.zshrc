@@ -30,6 +30,9 @@
     [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
     # minikube
     [[ $commands[minikube] ]] && source <(minikube completion zsh)
+    # yarn
+    [[ -f ~/.zsh-yarn-completions/zsh-yarn-completions.plugin.zsh ]] &&\
+      source ~/.zsh-yarn-completions/zsh-yarn-completions.plugin.zsh
 # }
 
 # コマンド履歴 {

@@ -18,7 +18,8 @@ symlink: \
 	${HOME}/.gitconfig \
 	${HOME}/.tmux.conf \
 	${HOME}/.vimrc \
-	${HOME}/.asdfrc
+	${HOME}/.asdfrc \
+	${HOME}/.zsh-yarn-completions
 
 ${HOME}/.zshrc: ${HOME}/.zshenv ${HOME}/.zshrc.local
 	ln -fs $(DOTFILES)/etc/.zshrc ${HOME}/.zshrc
@@ -52,6 +53,9 @@ ${HOME}/.vimrc:
 
 ${HOME}/.asdfrc:
 	ln -fs $(DOTFILES)/etc/.asdfrc ${HOME}/.asdfrc
+
+${HOME}/.zsh-yarn-completions:
+	ln -fsn ${DOTFILES}/vendor/gitmodules/zsh-yarn-completions ${HOME}/.zsh-yarn-completions
 
 .PHONY: brew
 brew:
