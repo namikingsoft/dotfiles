@@ -7,3 +7,6 @@
 [submodule "vendor/gitmodules/asdf"]
 	path = vendor/gitmodules/asdf
 	url = https://github.com/asdf-vm/asdf.git
+[submodule "vendor/gitmodules/zsh-yarn-completions"]
+	path = vendor/gitmodules/zsh-yarn-completions
+	url = https://github.com/chrisands/zsh-yarn-completions.git
