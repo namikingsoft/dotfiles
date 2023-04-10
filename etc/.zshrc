@@ -208,7 +208,7 @@
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
       # NOTE: `.` command is `source`
-      encmount && . "$(find /Volumes/encrypted/env -name '*.txt' | peco)" && encdetach
+      encmount && . "$(find /Volumes/encrypted/env -name '*.txt' | peco)" && encunmount
     }
 # }
 
