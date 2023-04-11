@@ -199,6 +199,12 @@
     # http://dev.jgs.me/2015/01/06/atom-LSOpenURLsWithRole-error.html
     # http://qiita.com/itkrt2y/items/dee87c406617d1bd45a6
     alias reattach="which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l $SHELL || $SHELL"
+    # JWT
+    # Usage `pbpaste | jwtd`
+    # Alt: alias jwtdecode='tr "." "\n" | tr -- "-_" "+/" | head -n 2 | base64 -D'
+    function jwtd {
+      jq -R 'gsub("-";"+") | gsub("_";"/") | split(".") | .[0,1] | @base64d | fromjson'
+    }
     # export .env
     function dotenv {
       export $(cat "${1:-.env}" | grep -v '^#' | grep -v '^$' | xargs)
