@@ -18,6 +18,7 @@
     commita = commit -a
     commite = commit --allow-empty -m 'Initial Commit'
     commit-amend-now = commit --amend "`date`"
+    cp = cherry-pick
     fetpr = fetch --prune
     pr = commit --allow-empty -m 'chore(git): make pull request [ci skip]'
     wip = commit -m '[ci skip]'
