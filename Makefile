@@ -67,12 +67,7 @@ endif
 
 .PHONY: brewapps
 brewapps: brew
-	brew install git
-	brew install jq
-	brew install xq
-	brew install tmux
-	brew install peco
-	brew install aquaproj/aqua/aqua
+	cat etc/brewlist | xargs -L1 brew install
 
 .PHONY: tpm
 tpm: brew
