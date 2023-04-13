@@ -241,8 +241,8 @@
 
     # adsf
     if [ -s "$HOME/.asdf/asdf.sh" ]; then
-      # NOTE: asdf.sh だと VSCode と iTerm2 の PATH が変わる？
-      # . $HOME/.asdf/asdf.sh
+      . $HOME/.asdf/asdf.sh
+      # NOTE: asdf.sh だけだと VSCode と iTerm2 の PATH が変わる？
       export PATH="$HOME/.asdf/shims:$HOME/.asdf/bin:$PATH"
     fi
 
