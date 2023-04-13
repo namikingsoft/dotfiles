@@ -69,6 +69,7 @@ endif
 brewapps: brew
 	brew install git
 	brew install jq
+	brew install xq
 	brew install tmux
 	brew install peco
 	brew install aquaproj/aqua/aqua
