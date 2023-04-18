@@ -6,5 +6,6 @@ Thumbs.db
 .ipynb_checkpoints
 .env
 .vscode
+.tool-versions
 terraform.tfvars
 terraform.tfstate*
