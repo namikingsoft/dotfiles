@@ -21,8 +21,10 @@
     cp = cherry-pick
     fetpr = fetch --prune
     pr = commit --allow-empty -m 'chore(git): make pull request [ci skip]'
-    wip = commit -m '[ci skip]'
-    wipa = commit -am '[ci skip]'
+    wip = commit -m 'WIP'
+    wipa = commit -am 'WIP'
+    skip = commit -m '[ci skip]'
+    skipa = commit -am '[ci skip]'
     ss = status -s
     ls = log --name-status
     br = branch
