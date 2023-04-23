@@ -210,7 +210,7 @@
       export $(cat "${1:-.env}" | grep -v '^#' | grep -v '^$' | xargs)
     }
     # encrypted volume on icloud
-    alias encmount="hdiutil mount ~/Library/Mobile\ Documents/com~apple~CloudDocs/encrypted.dmg"
+    alias encmount="hdiutil mount ~/icloud/encrypted.dmg"
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
       # NOTE: `.` command is `source`

@@ -18,7 +18,8 @@ symlink: \
 	${HOME}/.tmux.conf \
 	${HOME}/.vimrc \
 	${HOME}/.asdfrc \
-	${HOME}/.zsh-yarn-completions
+	${HOME}/.zsh-yarn-completions \
+	${HOME}/icloud
 
 ${HOME}/.zshrc: ${HOME}/.zshenv ${HOME}/.zshrc.local
 	ln -fs $(DOTFILES)/etc/.zshrc ${HOME}/.zshrc
@@ -56,6 +57,9 @@ ${HOME}/.asdfrc:
 
 ${HOME}/.zsh-yarn-completions:
 	ln -fsn ${DOTFILES}/vendor/gitmodules/zsh-yarn-completions ${HOME}/.zsh-yarn-completions
+
+${HOME}/icloud:
+	ln -fsn ~/Library/Mobile\ Documents/com~apple~CloudDocs/ ${HOME}/icloud
 
 .PHONY: brew
 brew:
