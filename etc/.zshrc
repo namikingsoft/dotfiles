@@ -213,12 +213,14 @@
     alias encmount="hdiutil mount ~/icloud/encrypted.dmg"
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
+      args="$@"
       # NOTE: `.` command is `source`
-      encmount && . "$(find /Volumes/encrypted/env -name '*.txt' | peco)" && encunmount
+      encmount && . "$(find /Volumes/encrypted/env -name '*.txt' | peco --select-1 --query "$args")" && encunmount
     }
     # ish
     function ish {
-      source "$(find ~/icloud/scripts -name '*.sh' | peco)"
+      args="$@"
+      source "$(find ~/icloud/scripts -name '*.sh' | peco --select-1 --query "$args")"
     }
 # }
 
