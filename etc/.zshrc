@@ -216,6 +216,10 @@
       # NOTE: `.` command is `source`
       encmount && . "$(find /Volumes/encrypted/env -name '*.txt' | peco)" && encunmount
     }
+    # ish
+    function ish {
+      source "$(find ~/icloud/scripts -name '*.sh' | peco)"
+    }
 # }
 
 # PATH環境変数設定 {
