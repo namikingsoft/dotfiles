@@ -217,7 +217,7 @@
       # NOTE: `.` command is `source`
       encmount && . "$(find /Volumes/encrypted/env -name '*.txt' | peco --select-1 --query "$args")" && encunmount
     }
-    # ish
+    # execute script on icloud
     function ish {
       args="$@"
       source "$(find ~/icloud/scripts -name '*.sh' | peco --select-1 --query "$args")"
