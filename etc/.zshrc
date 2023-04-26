@@ -214,7 +214,7 @@
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
       args="$@"
-      encmount && find /Volumes/encrypted/env -name '*.txt' | sort | peco --select-1 --query "$args" | while read script; do
+      encmount && find /Volumes/encrypted/env -name '*.txt' | sort | fzf --multi --select-1 --query "$args" | while read script; do
         # NOTE: `.` command is `source`
         . "$script"
       done && encunmount
@@ -222,7 +222,7 @@
     # execute script on icloud
     function ish {
       args="$@"
-      find ~/icloud/scripts -name '*.sh' | sort | peco --select-1 --query "$args" | while read script; do
+      find ~/icloud/scripts -name '*.sh' | sort | fzf --multi --select-1 --query "$args" | while read script; do
         source "$script"
       done
     }
