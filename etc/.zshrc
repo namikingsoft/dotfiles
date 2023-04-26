@@ -222,9 +222,7 @@
     # execute script on icloud
     function ish {
       args="$@"
-      find ~/icloud/scripts -name '*.sh' | sort | fzf --multi --select-1 --query "$args" | while read script; do
-        cat "$script"
-        echo
+      find ~/icloud/scripts -name '*.sh' | sort | fzf --multi --select-1 --query "$args" --preview "cat {}" | while read script; do
         source "$script"
       done
     }
