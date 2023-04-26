@@ -223,6 +223,8 @@
     function ish {
       args="$@"
       find ~/icloud/scripts -name '*.sh' | sort | fzf --multi --select-1 --query "$args" | while read script; do
+        cat "$script"
+        echo
         source "$script"
       done
     }
