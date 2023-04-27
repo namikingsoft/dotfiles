@@ -209,12 +209,16 @@
     function dotenv {
       export $(cat "${1:-.env}" | grep -v '^#' | grep -v '^$' | xargs)
     }
+    # fzf
+    function fzfm {
+      fzf --reverse --no-sort --multi --select-1
+    }
     # encrypted volume on icloud
     alias encmount="hdiutil mount ~/icloud/encrypted.dmg"
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
       args="$@"
-      encmount && find /Volumes/encrypted/env -name '*.txt' | sort | fzf --multi --select-1 --query "$args" | while read script; do
+      encmount && find /Volumes/encrypted/env -name '*.txt' | sort | fzfm --query "$args" | while read script; do
         # NOTE: `.` command is `source`
         . "$script"
       done && encunmount
@@ -222,7 +226,9 @@
     # execute script on icloud
     function ish {
       args="$@"
-      find ~/icloud/scripts -name '*.sh' | sort | fzf --multi --select-1 --query "$args" --preview "bat --color=always --style numbers {}" | while read script; do
+      find ~/icloud/scripts -name '*.sh' | sort | fzfm --query "$args" --preview "bat --color=always --style numbers {}" | while read script; do
+        cat "$script"
+        echo
         source "$script"
       done
     }
