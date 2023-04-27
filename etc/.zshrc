@@ -212,7 +212,7 @@
     }
     # fzf
     function fzfm {
-      fzf --reverse --no-sort --multi --select-1
+      fzf -e -i --reverse --no-sort --multi --select-1
     }
     # encrypted volume on icloud
     alias encmount="hdiutil mount ~/icloud/encrypted.dmg"
