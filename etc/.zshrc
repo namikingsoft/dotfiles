@@ -211,9 +211,7 @@
       export $(cat "${1:-.env}" | grep -v '^#' | grep -v '^$' | xargs)
     }
     # fzf
-    function fzfm {
-      fzf -e -i --reverse --no-sort --multi --select-1
-    }
+    alias fzfm="fzf -e -i --reverse --no-sort --multi --select-1"
     # encrypted volume on icloud
     alias encmount="hdiutil mount ~/icloud/encrypted.dmg"
     alias encunmount="hdiutil detach /Volumes/encrypted"
