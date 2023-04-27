@@ -219,19 +219,25 @@
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
       args="$@"
-      encmount && find /Volumes/encrypted/env -name '*.txt' | sort | fzfm --query "$args" | while read script; do
+      encmount || return
+      cd /Volumes/encrypted/env > /dev/null
+      find . -name '*.txt' | sort | fzfm --query "$args" | while read script; do
         # NOTE: `.` command is `source`
         . "$script"
-      done && encunmount
+      done
+      cd - > /dev/null
+      encunmount
     }
     # execute script on icloud
     function ish {
       args="$@"
-      find ~/icloud/scripts -name '*.sh' | sort | fzfm --query "$args" --preview "bat --color=always --style numbers {}" | while read script; do
+      pushd ~/icloud/scripts > /dev/null
+      find . -name '*.sh' | sort | fzfm --query "$args" --preview "bat --color=always --style numbers {}" | while read script; do
         cat "$script"
         echo
         source "$script"
       done
+      popd > /dev/null
     }
 # }
 
