@@ -191,7 +191,8 @@
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
     # zshrc再読み込み
-    alias reload="source ~/.zshrc; echo '.zshrc reloaded'"
+    alias rc="source ~/.zshrc; echo '.zshrc reloaded'"
+    alias rr="rc"
     # vim 新セッション作成
     alias vimnew="rm -rf .vimsessions; mkdir .vimsessions; vim +SaveSession"
     alias vimn="vimnew"
