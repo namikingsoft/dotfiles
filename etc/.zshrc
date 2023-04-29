@@ -241,10 +241,11 @@
     }
     # bitwarden
     function bwexp {
-      sed -i '' '/^export BW_SESSION=/d' ~/.zshrc.local
       token="$(bw unlock --raw)"
-      echo export BW_SESSION=\"$token\" >> ~/.zshrc.local
-      source ~/.zshrc.local
+      zshlocal="${HOME}/.zshrc.local"
+      sed -i '' '/^export BW_SESSION=/d' "$zshlocal"
+      echo export BW_SESSION=\"$token\" >> "$zshlocal"
+      source "$zshlocal"
     }
 # }
 
