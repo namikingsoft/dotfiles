@@ -59,7 +59,7 @@ endif
     " ctrlp
     call dein#add('kien/ctrlp.vim')
         set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif
-        let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|.git)$'
+        let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|.git|vendor)$'
         let g:ctrlp_show_hidden = 1
     " Scala
     call dein#add('derekwyatt/vim-scala')
