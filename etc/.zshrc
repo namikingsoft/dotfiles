@@ -213,7 +213,9 @@
     # fzf
     alias fzfm="fzf -e -i --reverse --no-sort --multi --select-1"
     # encrypted volume on icloud
-    alias encmount="hdiutil mount ~/icloud/encrypted.dmg"
+    function encmount {
+      printf '%s\0' "$(bw get password encrypted.dmg)" | hdiutil attach ~/icloud/encrypted.dmg -stdinpass
+    }
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
       args="$@"
@@ -236,6 +238,13 @@
         source "$script"
       done
       popd > /dev/null
+    }
+    # bitwarden
+    function bwexp {
+      sed -i '' '/^export BW_SESSION=/d' ~/.zshrc.local
+      token="$(bw unlock --raw)"
+      echo export BW_SESSION=\"$token\" >> ~/.zshrc.local
+      source ~/.zshrc.local
     }
 # }
 
