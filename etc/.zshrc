@@ -241,7 +241,7 @@
     }
     # bitwarden
     function bwexp {
-      token="$(bw unlock --raw)"
+      token="$(bw unlock --raw --session $(( 60 * 60 * 24 * 5 )))"
       zshlocal="${HOME}/.zshrc.local"
       sed -i '' '/^export BW_SESSION=/d' "$zshlocal"
       echo export BW_SESSION=\"$token\" >> "$zshlocal"
