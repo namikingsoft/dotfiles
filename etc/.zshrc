@@ -228,6 +228,7 @@
       cd - > /dev/null
       encunmount
     }
+    alias ee="encenv"
     # execute script on icloud
     function ish {
       args="$@"
