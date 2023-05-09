@@ -39,6 +39,8 @@
     adda = add --all
     adi = add -i
     addi = add -i
+    fixup = commit --amend --no-edit
+    fixupa = !git ada && git fixup
     # git diff のvimdiff版
     vimdiff = difftool --tool=vimdiff --no-prompt
     vdf     = difftool --tool=vimdiff --no-prompt
