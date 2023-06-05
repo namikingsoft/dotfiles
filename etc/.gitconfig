@@ -22,9 +22,9 @@
     fetpr = fetch --prune
     pr = commit --allow-empty -m 'chore(git): make pull request [ci skip]'
     wip = commit -m 'WIP'
-    wipa = commit -am 'WIP'
+    wipa = !git ada && git wip
     skip = commit -m '[ci skip]'
-    skipa = commit -am '[ci skip]'
+    skipa = !git ada && git skip
     ss = status -s
     ls = log --name-status
     br = branch
