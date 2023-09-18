@@ -1,6 +1,5 @@
 authy
 bettertouchtool
-clipy
 docker
 firefox
 google-chrome
@@ -8,4 +7,5 @@ google-japanese-ime
 graphql-playground
 iterm2
 karabiner-elements
+raycast
 visual-studio-code
