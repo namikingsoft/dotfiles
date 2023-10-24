@@ -31,6 +31,8 @@
     brm = branch -m
     brd = branch -d
     brdf = branch -D
+    # マージ済みのローカルブランチを削除する (squash merge 対応)
+    brdall = !git-branch-delete-all
     pushf = push --force-with-lease
     pushe = push heroku master
     mergef = merge --ff
@@ -46,8 +48,7 @@
     vdf     = difftool --tool=vimdiff --no-prompt
     # git log の木構造表示
     tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
-    # マージ済みのローカルブランチを削除する
-    brdall = !git branch --merged | grep -v '*' | grep -v 'master' | grep -v 'develop' | xargs -I % git branch -d %
+
     # 管理内のファイル更新を無視する
     ignore = update-index --assume-unchanged
     unignore = update-index --no-assume-unchanged

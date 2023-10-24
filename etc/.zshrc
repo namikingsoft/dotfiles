@@ -171,6 +171,18 @@
     alias dome="docker_machine_eval_env"
     alias domes="docker_machine_eval_env_swarm"
     alias domfault="eval \$(dom env default)"
+    # git
+    function git-branch-delete-all {
+      current_branch="$(git rev-parse --abbrev-ref HEAD)"
+      default_branch="$(git remote show origin | grep 'HEAD branch' | awk '{print $NF}')"
+      git checkout -q "$default_branch"
+      git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do
+        merge_base="$(git merge-base "$default_branch" "$branch")"
+        [[ "$(git cherry "$default_branch" "$(git commit-tree "$(git rev-parse "$branch^{tree}")" -p "$merge_base" -m _)")" == "-"* ]] && \
+          git branch -D "$branch"
+      done
+      git checkout "$current_branch"
+    }
     # kubectl
     alias kube="kubectl"
     alias kubec="kubectl"
