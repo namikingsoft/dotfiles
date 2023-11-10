@@ -30,7 +30,7 @@ ${HOME}/.zshenv:
 ${HOME}/.zshrc.local:
 	-yes n | cp -i $(DOTFILES)/etc/.zshrc.local ${HOME}/.zshrc.local
 
-${HOME}/.gitconfig: ${HOME}/.gitconfig.ignore ${HOME}/.gitconfig.local
+${HOME}/.gitconfig: ${HOME}/.gitconfig.ignore ${HOME}/.gitconfig.local ${HOME}/.gitmessage.local
 	ln -fs $(DOTFILES)/etc/.gitconfig ${HOME}/.gitconfig
 
 ${HOME}/.gitconfig.ignore:
@@ -38,6 +38,9 @@ ${HOME}/.gitconfig.ignore:
 
 ${HOME}/.gitconfig.local:
 	-yes n | cp -i $(DOTFILES)/etc/.gitconfig.local ${HOME}/.gitconfig.local
+
+${HOME}/.gitmessage.local:
+	-yes n | cp -i $(DOTFILES)/etc/.gitmessage.local ${HOME}/.gitmessage.local
 
 ${HOME}/.tmux.conf: ${HOME}/.tmux-powerlinerc ${HOME}/.tmux/plugins/tpm
 	ln -fs $(DOTFILES)/etc/.tmux.conf ${HOME}/.tmux.conf
