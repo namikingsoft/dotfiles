@@ -63,11 +63,7 @@ ${HOME}/icloud:
 
 .PHONY: brew
 brew:
-ifdef $(shell hash brew)
-	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-else
-	@echo $@ already installed
-endif
+	hash brew || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 .PHONY: brewapps
 brewapps: brew

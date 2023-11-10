@@ -278,6 +278,9 @@
     # tmux powerline 用 (https://github.com/erikw/tmux-powerline)
     PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
+    # brew
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
     # https://www.rust-lang.org/tools/install
     if [ -s "$HOME/.cargo/env" ]; then
       source "$HOME/.cargo/env"
