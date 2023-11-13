@@ -264,8 +264,6 @@
 
 # PATH環境変数設定 {
     # zshenvだと、優先度がデフォルトより低くなるため、こっちに移動
-    # Homebrew でインストールした bin の優先度を上げておく
-    PATH=/usr/local/bin:$PATH
     PATH=$HOME/bin:$PATH
     PATH=$HOME/local/bin:$PATH
     PATH=./bin:$PATH
