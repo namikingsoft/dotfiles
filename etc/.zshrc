@@ -231,14 +231,14 @@
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
       args="$@"
-      encmount || return
-      cd /Volumes/encrypted/env > /dev/null
-      find . -name '*.txt' | sort | fzfm --query "$args" | while read script; do
-        # NOTE: `.` command is `source`
-        . "$script"
-      done
-      cd - > /dev/null
-      encunmount
+      encmount 2> /dev/null || true
+      if [ -e /Volumes/encrypted ]; then
+        find /Volumes/encrypted/env -name '*.txt' | sort | fzfm --query "$args" | while read script; do
+          # NOTE: `.` command is `source`
+          . "$script"
+        done
+        encunmount 2> /dev/null
+      fi
     }
     alias ee="encenv"
     # execute script on icloud
