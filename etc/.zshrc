@@ -39,9 +39,9 @@
     # ヒストリを保存するファイル
     HISTFILE=~/.zsh_history
     # メモリに保存されるヒストリの件数
-    HISTSIZE=10000
+    HISTSIZE=100000
     # 保存されるヒストリの件数
-    SAVEHIST=1000000
+    SAVEHIST=10000000
     # !を使ったヒストリ展開を行う(d)
     setopt bang_hist
     # ヒストリに実行時間も保存する
