@@ -15,3 +15,7 @@ export MANPATH
 
 # Tree Charset
 export TREE_CHARSET=C
+
+# Cloud Drive Path
+export ICLOUD_PATH="$HOME/icloud"
+export GDRIVE_PATH="$HOME/Google Drive/マイドライブ"

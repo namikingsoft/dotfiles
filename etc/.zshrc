@@ -279,7 +279,7 @@
 
     # encrypted volume on icloud
     function encmount {
-      printf '%s\0' "$(cat ~/Google\ Drive/マイドライブ/etc/encrypted.dmg)" | hdiutil attach ~/icloud/encrypted.dmg -stdinpass
+      printf '%s\0' "$(cat "$GDRIVE_PATH/etc/encrypted.dmg")" | hdiutil attach "$ICLOUD_PATH/encrypted.dmg" -stdinpass
     }
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
@@ -298,7 +298,7 @@
     # execute script on icloud
     function ish {
       args="$@"
-      pushd ~/icloud/scripts > /dev/null
+      pushd "$ICLOUD_PATH/scripts" > /dev/null
       find . -name '*.sh' | sort | fzfm --query "$args" --preview "bat --color=always --style numbers {}" | while read script; do
         cat "$script"
         echo
