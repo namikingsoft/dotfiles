@@ -226,7 +226,7 @@
     alias fzfm="fzf -e -i --reverse --no-sort --multi --select-1"
     # encrypted volume on icloud
     function encmount {
-      printf '%s\0' "$(NODE_OPTIONS="--no-deprecation" bw get password encrypted.dmg)" | hdiutil attach ~/icloud/encrypted.dmg -stdinpass
+      printf '%s\0' "$(cat ~/Google\ Drive/マイドライブ/etc/encrypted.dmg)" | hdiutil attach ~/icloud/encrypted.dmg -stdinpass
     }
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
