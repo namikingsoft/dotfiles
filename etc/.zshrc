@@ -1,6 +1,7 @@
 # キーバインドモード {
     # vim
     bindkey -v
+
     # emacs
     #bindkey -e
 # }
@@ -8,28 +9,40 @@
 # コマンド補完 {
     # 補完機能を有効にする
     autoload -U compinit; compinit
+
     # 補完候補を一覧で表示する(d)
     setopt auto_list
+
     # 補完キー連打で補完候補を順に表示する(d)
     setopt auto_menu
+
     # 補完候補をできるだけ詰めて表示する
     setopt list_packed
+
     # 補完候補にファイルの種類も表示する
     setopt list_types
+
     # グロブ機能を拡張する
     setopt extended_glob
+
     # ファイルグロブで大文字小文字を区別しない
     #unsetopt caseglob
+
     # 補完時に大文字小文字を区別しない
     #zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
     # Shift-Tabで補完候補を逆順する("\e[Z"でも動作する)
     bindkey "^[[Z" reverse-menu-complete
+
     # コマンドのスペルを訂正しない
     unsetopt correctall
+
     # kubectl
     [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
     # minikube
     [[ $commands[minikube] ]] && source <(minikube completion zsh)
+
     # yarn
     [[ -f ~/.zsh-yarn-completions/zsh-yarn-completions.plugin.zsh ]] &&\
       source ~/.zsh-yarn-completions/zsh-yarn-completions.plugin.zsh
@@ -38,18 +51,25 @@
 # コマンド履歴 {
     # ヒストリを保存するファイル
     HISTFILE=~/.zsh_history
+
     # メモリに保存されるヒストリの件数
     HISTSIZE=100000
+
     # 保存されるヒストリの件数
     SAVEHIST=10000000
+
     # !を使ったヒストリ展開を行う(d)
     setopt bang_hist
+
     # ヒストリに実行時間も保存する
     setopt extended_history
+
     # 直前と同じコマンドはヒストリに追加しない
     setopt hist_ignore_dups
+
     # 他のシェルのヒストリをリアルタイムで共有する
     setopt share_history
+
     # 余分なスペースを削除してヒストリに保存する
     setopt hist_reduce_blanks
 # }
@@ -90,18 +110,25 @@
 # その他オプション {
     # ビープ音を鳴らさないようにする
     setopt no_beep
+
     # ディレクトリ名の入力のみで移動する
     setopt auto_cd
+
     # cd時にディレクトリスタックにpushdする
     setopt auto_pushd
+
     # =以降も補完する(--prefix=/usrなど)
     setopt magic_equal_subst
+
     # プロンプト定義内で変数置換やコマンド置換を扱う
     setopt prompt_subst
+
     # バックグラウンドジョブの状態変化を即時報告する
     setopt notify
+
     # =commandを`which command`と同じ処理にする
     setopt equals
+
     # 日本語ファイル名を表示可能にする
     setopt print_eight_bit
 # }
@@ -109,36 +136,49 @@
 # Alias {
     # ディレクトリ作成後、カレントディレクトリに
     function mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
     # 色付きls
     case "${OSTYPE}" in
         darwin*) alias ls="ls -G" ;;
         linux*)  alias ls='ls --color' ;;
         *)       alias ls='ls' ;;
     esac
+
     # リストls
     alias ll="ls -l"
+
     # 隠しファイルリストls
     alias la="ls -al"
+
     # コマンド履歴全件表示
     alias ha="history -i 0"
+
     # tmux 256色
     alias t="tmux -2"
+
     # tmux アタッチ
     alias ta="t a"
+
     # vagrant rsync & vagrant ssh
     alias vssh="vagrant rsync-auto &> /dev/null & vagrant ssh && fg"
+
     # bundle exec (noglob)
     alias be="noglob bundle exec"
+
     # bundle exec spring (noglob)
     alias bes="noglob bundle exec spring"
+
     # brew
     alias brew-tree="brew list | xargs brew deps --tree"
+
     # npm
     alias npms="npm start"
     alias npme="npm run $1 --"
     alias npmt="npm run test:watch"
+
     # deno
     alias denot="deno task"
+
     # docker
     function docker_compose_clean() {
         docker rm -fv `docker-compose ps -q`
@@ -171,6 +211,7 @@
     alias dome="docker_machine_eval_env"
     alias domes="docker_machine_eval_env_swarm"
     alias domfault="eval \$(dom env default)"
+
     # git
     function git-branch-delete-all {
       current_branch="$(git rev-parse --abbrev-ref HEAD)"
@@ -183,6 +224,7 @@
       done
       git checkout "$current_branch"
     }
+
     # kubectl
     alias kube="kubectl"
     alias kubec="kubectl"
@@ -196,34 +238,44 @@
         kubectl config set-context $(kubectl config current-context) --namespace=$1
       fi
     }
+
     # Terraform
     alias ter="terraform"
+
     # Haskell
     alias rhs="runhaskell Setup.hs"
+
     # php xdebug
     alias phpx="env XDEBUG_CONFIG='idekey=xdebug' php"
+
     # zshrc再読み込み
     alias rc="source ~/.zshrc; echo '.zshrc reloaded'"
     alias rr="rc"
+
     # vim 新セッション作成
     alias vimnew="rm -rf .vimsessions; mkdir .vimsessions; vim +SaveSession"
     alias vimn="vimnew"
+
     # MacOSX用 tmux経由でアプリを起動すると色々うまくいかない問題の解決法
     # http://dev.jgs.me/2015/01/06/atom-LSOpenURLsWithRole-error.html
     # http://qiita.com/itkrt2y/items/dee87c406617d1bd45a6
     alias reattach="which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l $SHELL || $SHELL"
+
     # JWT
     # Usage `pbpaste | jwtd`
     # Alt: alias jwtdecode='tr "." "\n" | tr -- "-_" "+/" | head -n 2 | base64 -D'
     function jwtd {
       jq -R 'gsub("-";"+") | gsub("_";"/") | split(".") | .[0,1] | @base64d | fromjson'
     }
+
     # export .env
     function dotenv {
       export $(cat "${1:-.env}" | grep -v '^#' | grep -v '^$' | xargs)
     }
+
     # fzf
     alias fzfm="fzf -e -i --reverse --no-sort --multi --select-1"
+
     # encrypted volume on icloud
     function encmount {
       printf '%s\0' "$(cat ~/Google\ Drive/マイドライブ/etc/encrypted.dmg)" | hdiutil attach ~/icloud/encrypted.dmg -stdinpass
@@ -241,6 +293,7 @@
       fi
     }
     alias ee="encenv"
+
     # execute script on icloud
     function ish {
       args="$@"
@@ -252,6 +305,7 @@
       done
       popd > /dev/null
     }
+
     # bitwarden
     function bwexp {
       token="$(bw unlock --raw --session $(( 60 * 60 * 24 * 5 )))"
