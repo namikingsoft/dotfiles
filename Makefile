@@ -70,7 +70,7 @@ brew:
 
 .PHONY: brewapps
 brewapps: brew
-	cat etc/brewlist | xargs -L1 brew install
+	cat etc/.brewlist | xargs -L1 brew install
 
 .PHONY: tpm
 tpm: brew
@@ -82,17 +82,17 @@ mas: brew
 
 .PHONY: masapps
 masapps: mas
-	cat etc/maslist | awk '{print $$1}' | xargs -n1 mas install
+	cat etc/.maslist | awk '{print $$1}' | xargs -n1 mas install
 
-etc/maslist:
-	mas list | awk '{NF=NF-1}1' | grep -vxFf etc/masignore > $@
+etc/.maslist:
+	mas list | awk '{NF=NF-1}1' | grep -vxFf etc/.masignore > $@
 
 .PHONY: cask
 cask: brew
-	cat etc/casklist | xargs -n1 brew install --cask
+	cat etc/.casklist | xargs -n1 brew install --cask
 
-etc/casklist:
-	brew list --cask | grep -vxFf etc/caskignore > $@
+etc/.casklist:
+	brew list --cask | grep -vxFf etc/.caskignore > $@
 
 .PHONY: asdf
 asdf:
