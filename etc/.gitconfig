@@ -20,7 +20,7 @@
     commit-amend-now = commit --amend "`date`"
     cp = cherry-pick
     fetpr = fetch --prune
-    pr = commit --allow-empty -m 'chore(git): make pull request [ci skip]'
+    pr = commit --allow-empty -m 'Make pull request'
     wip = commit -m 'WIP'
     wipa = !git ada && git wip
     skip = commit -m '[ci skip]'
