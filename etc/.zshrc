@@ -331,9 +331,14 @@
     # tmux powerline 用 (https://github.com/erikw/tmux-powerline)
     PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
-    #brew
+    # brew
     if [ -s "/opt/homebrew/bin/brew" ]; then
       eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
+
+    # ruby (brew)
+    if [ -d /opt/homebrew/opt/ruby/bin ]; then
+      export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
     fi
 
     # https://www.rust-lang.org/tools/install
