@@ -19,6 +19,8 @@ symlink: \
 	${HOME}/.vimrc \
 	${HOME}/.asdfrc \
 	${HOME}/.zsh-yarn-completions \
+	${HOME}/.claude/skills \
+	${HOME}/.claude/settings.json \
 	${HOME}/icloud
 
 ${HOME}/.zshrc: ${HOME}/.zshenv ${HOME}/.zshrc.local
@@ -61,12 +63,17 @@ ${HOME}/.asdfrc:
 ${HOME}/.zsh-yarn-completions:
 	ln -fsn ${DOTFILES}/vendor/gitmodules/zsh-yarn-completions ${HOME}/.zsh-yarn-completions
 
+${HOME}/.claude:
+	mkdir -p ${HOME}/.claude
+
+${HOME}/.claude/skills:
+	ln -fsn $(DOTFILES)/etc/.claude/skills ${HOME}/.claude/skills
+
+${HOME}/.claude/settings.json: ${HOME}/.claude
+	ln -fs $(DOTFILES)/etc/.claude/settings.json ${HOME}/.claude/settings.json
+
 ${HOME}/icloud:
 	ln -fsn ~/Library/Mobile\ Documents/com~apple~CloudDocs/ ${HOME}/icloud
-
-${HOME}/.claude/settings.json:
-	mkdir -p ${HOME}/.claude
-	ln -fs $(DOTFILES)/etc/.claude/settings.json ${HOME}/.claude/settings.json
 
 .PHONY: brew
 brew:
