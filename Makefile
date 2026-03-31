@@ -64,6 +64,10 @@ ${HOME}/.zsh-yarn-completions:
 ${HOME}/icloud:
 	ln -fsn ~/Library/Mobile\ Documents/com~apple~CloudDocs/ ${HOME}/icloud
 
+${HOME}/.claude/settings.json:
+	mkdir -p ${HOME}/.claude
+	ln -fs $(DOTFILES)/etc/.claude/settings.json ${HOME}/.claude/settings.json
+
 .PHONY: brew
 brew:
 	hash brew || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
