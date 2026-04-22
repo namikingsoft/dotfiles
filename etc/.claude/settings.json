@@ -5,12 +5,15 @@
       "Bash(find:*)",
       "mcp__plugin_chrome-devtools-mcp_chrome-devtools__*"
     ],
-    "additionalDirectories": ["/tmp/vrt"]
+    "additionalDirectories": [
+      "/tmp/vrt"
+    ]
   },
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "github@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
-    "chrome-devtools-mcp@claude-plugins-official": true
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
   }
 }
