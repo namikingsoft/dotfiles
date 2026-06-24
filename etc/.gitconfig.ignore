@@ -8,6 +8,8 @@ Thumbs.db
 .vscode
 .private
 .tool-versions
+.playwright-mcp
+.claude/*.local.*
 terraform.tfvars
 terraform.tfstate*
 tsconfig.tsbuildinfo
