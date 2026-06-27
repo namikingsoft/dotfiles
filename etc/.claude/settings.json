@@ -1,6 +1,5 @@
 {
   "permissions": {
-    "defaultMode": "auto",
     "allow": [
       "Bash(grep:*)",
       "Bash(find:*)",
@@ -11,6 +10,7 @@
       "mcp__plugin_github_github__*",
       "mcp__plugin_figma_figma__*"
     ],
+    "defaultMode": "auto",
     "additionalDirectories": [
       "/tmp/vrt"
     ]
@@ -21,8 +21,7 @@
     "playwright@claude-plugins-official": true,
     "chrome-devtools-mcp@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
-    "sentry-skills@sentry-skills": true,
-    "figma@claude-plugins-official": true
+    "sentry-skills@sentry-skills": true
   },
   "extraKnownMarketplaces": {
     "sentry-skills": {
@@ -31,5 +30,7 @@
         "repo": "getsentry/skills"
       }
     }
-  }
+  },
+  "theme": "dark",
+  "tui": "fullscreen"
 }
