@@ -66,11 +66,17 @@ ${HOME}/.zsh-yarn-completions:
 ${HOME}/.claude:
 	mkdir -p ${HOME}/.claude
 
-${HOME}/.claude/skills:
+${HOME}/.claude/skills: ${HOME}/.claude
 	ln -fsn $(DOTFILES)/etc/.claude/skills ${HOME}/.claude/skills
 
 ${HOME}/.claude/settings.json: ${HOME}/.claude
 	ln -fs $(DOTFILES)/etc/.claude/settings.json ${HOME}/.claude/settings.json
+
+${HOME}/.config/karabiner:
+	mkdir -p ${HOME}/.config/karabiner
+
+${HOME}/.config/karabiner/karabiner.json: ${HOME}/.config/karabiner
+	ln -fs $(DOTFILES)/etc/.config/karabiner/karabiner.json ${HOME}/.config/karabiner/karabiner.json
 
 ${HOME}/icloud:
 	ln -fsn ~/Library/Mobile\ Documents/com~apple~CloudDocs/ ${HOME}/icloud
