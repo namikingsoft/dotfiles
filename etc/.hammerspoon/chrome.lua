@@ -1,4 +1,3 @@
--- Option + arrow keys in Chrome
 local function chromeOnly(fn)
   return function()
     local app = hs.application.frontmostApplication()
@@ -8,7 +7,7 @@ local function chromeOnly(fn)
   end
 end
 
-hs.hotkey.bind({"alt"}, "down",  chromeOnly(function() hs.eventtap.keyStroke({"cmd"},         "w"    ) end))
-hs.hotkey.bind({"alt"}, "up",    chromeOnly(function() hs.eventtap.keyStroke({"cmd", "shift"}, "t"    ) end))
-hs.hotkey.bind({"shift"}, "left",  chromeOnly(function() hs.eventtap.keyStroke({"cmd", "alt"},   "left" ) end))
-hs.hotkey.bind({"shift"}, "right", chromeOnly(function() hs.eventtap.keyStroke({"cmd", "alt"},   "right") end))
+hs.hotkey.bind({"option"}, "m", chromeOnly(function() hs.eventtap.keyStroke({"cmd"}, "w") end))
+hs.hotkey.bind({"option"}, "n", chromeOnly(function() hs.eventtap.keyStroke({"cmd", "shift"}, "t") end))
+hs.hotkey.bind({"option"}, ",", chromeOnly(function() hs.eventtap.keyStroke({"cmd", "alt"}, "left") end))
+hs.hotkey.bind({"option"}, ".", chromeOnly(function() hs.eventtap.keyStroke({"cmd", "alt"}, "right") end))
