@@ -1,16 +1,12 @@
-dotfiles
-==============================
+# dotfiles
 
-Getting Started
------------------------------
+## Getting Started
 
 ```sh
 make
-make install
 ```
 
-Notes
------------------------------
+## Notes
 
 ### Save asdf plugin list
 

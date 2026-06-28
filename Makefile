@@ -1,10 +1,10 @@
 DOTFILES := $(shell pwd)
 
-.PHONY: all
-all: submodule
+# Preset PATH for Homebrew
+export PATH := /opt/homebrew/bin:/usr/local/bin:$(PATH)
 
-.PHONY: install
-install: symlink asdf brew brewapps mas masapps cask
+.PHONY: all
+all: submodule symlink asdf brew brewapps mas masapps cask
 
 .PHONY: submodule
 submodule:
