@@ -283,6 +283,13 @@
     }
     alias encunmount="hdiutil detach /Volumes/encrypted"
     function encenv {
+      # POSIX flock
+      while ! mkdir /tmp/encenv.lock 2>/dev/null; do
+        sleep 1
+        echo Waiting unlock /tmp/encenv.lock ...
+      done
+      trap 'rmdir /tmp/encenv.lock' EXIT
+
       args="$@"
       encmount 2> /dev/null || true
       if [ -e /Volumes/encrypted ]; then
