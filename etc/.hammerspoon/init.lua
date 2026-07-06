@@ -1,2 +1,0 @@
-require("chrome")
-require("sleep")

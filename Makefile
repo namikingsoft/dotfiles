@@ -21,7 +21,6 @@ symlink: \
 	${HOME}/.zsh-yarn-completions \
 	${HOME}/.claude/skills \
 	${HOME}/.claude/settings.json \
-	${HOME}/.hammerspoon \
 	${HOME}/.config/karabiner/karabiner.json \
 	${HOME}/icloud
 
@@ -73,9 +72,6 @@ ${HOME}/.claude/skills: ${HOME}/.claude
 
 ${HOME}/.claude/settings.json: ${HOME}/.claude
 	ln -fs $(DOTFILES)/etc/.claude/settings.json ${HOME}/.claude/settings.json
-
-${HOME}/.hammerspoon:
-	ln -fsn $(DOTFILES)/etc/.hammerspoon ${HOME}/.hammerspoon
 
 ${HOME}/.config/karabiner:
 	mkdir -p ${HOME}/.config/karabiner
