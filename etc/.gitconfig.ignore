@@ -10,7 +10,7 @@ Thumbs.db
 .tool-versions
 .playwright-mcp
 .claude/*.local.*
-docs/superpowers/plans
+docs/superpowers
 terraform.tfvars
 terraform.tfstate*
 tsconfig.tsbuildinfo
